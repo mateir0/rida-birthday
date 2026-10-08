@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import dynamic from 'next/dynamic';
+import Script from 'next/script';
 import { BIRTHDAY_CONFIG } from '@/config/birthday';
 
 const ParticleCanvas = dynamic(() => import('@/components/ParticleCanvas'), { ssr: false });
@@ -193,6 +194,10 @@ export default function Home() {
       {/* Particle Background */}
       <ParticleCanvas />
 
+      {/* Tenor embed script — loaded once, inside the entered branch so the
+          gif divs below already exist when embed.js runs */}
+      <Script src="https://tenor.com/embed.js" strategy="afterInteractive" />
+
       {/* ═══════════════════════════════════════════════════ */}
       {/* HERO SECTION (Exact Mobile & Desktop Proportions)    */}
       {/* ═══════════════════════════════════════════════════ */}
@@ -216,6 +221,10 @@ export default function Home() {
           <p className="hero-tagline text-sm sm:text-xl md:text-2xl text-[#3A2A33]/80 font-light max-w-2xl mx-auto leading-relaxed px-2 sm:px-0">
             {BIRTHDAY_CONFIG.hero.taglineBefore} <span className="text-[#F43F5E] font-bold">{BIRTHDAY_CONFIG.hero.highlightText}</span> {BIRTHDAY_CONFIG.hero.taglineAfter}
           </p>
+
+          <div className="max-w-md mx-auto w-full px-2">
+            <div className="tenor-gif-embed" data-postid="22536058" data-share-method="host" data-aspect-ratio="1.12121" data-width="100%"><a href="https://tenor.com/view/bear-kiss-bear-kisses-kiss-kisses-love-gif-22536058">Bear Kiss Bear Kisses Sticker</a>from <a href="https://tenor.com/search/bear+kiss-stickers">Bear Kiss Stickers</a></div>
+          </div>
 
         </div>
 
@@ -523,6 +532,9 @@ export default function Home() {
           </div>
 
           {/* Wishes */}
+          <div className="max-w-sm mx-auto w-full px-2">
+            <div className="tenor-gif-embed" data-postid="22536058" data-share-method="host" data-aspect-ratio="1.12121" data-width="100%"><a href="https://tenor.com/view/bear-kiss-bear-kisses-kiss-kisses-love-gif-22536058">Bear Kiss Bear Kisses Sticker</a>from <a href="https://tenor.com/search/bear+kiss-stickers">Bear Kiss Stickers</a></div>
+          </div>
           <div className="text-reveal max-w-2xl mx-auto space-y-4 sm:space-y-6 pt-2 px-2">
             {BIRTHDAY_CONFIG.finaleSection.wishesParagraphs.map((para, i) => (
               <p key={i} className={`leading-relaxed ${i === 0 ? 'text-sm sm:text-2xl text-[#3A2A33] font-light' : i === 1 ? 'text-sm sm:text-2xl text-[#3A2A33]/90 font-light italic' : 'text-xs sm:text-xl text-[#F43F5E] font-semibold'}`}>
