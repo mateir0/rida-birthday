@@ -217,12 +217,6 @@ export default function Home() {
             {BIRTHDAY_CONFIG.hero.taglineBefore} <span className="text-[#FFD700] font-bold">{BIRTHDAY_CONFIG.hero.highlightText}</span> {BIRTHDAY_CONFIG.hero.taglineAfter}
           </p>
 
-          <div className="hero-image float-y pt-4 sm:pt-6">
-            <div className="relative inline-block">
-              <div className="absolute -inset-6 bg-gradient-to-r from-[#F8C8DC]/30 via-[#FFD700]/30 to-[#E6E6FA]/30 rounded-3xl blur-3xl"></div>
-              <img src={BIRTHDAY_CONFIG.hero.heroImage} alt="Gift box" className="relative w-56 sm:w-80 md:w-96 rounded-2xl shadow-2xl shadow-pink-900/40 mx-auto" />
-            </div>
-          </div>
         </div>
 
         <div className="hero-scroll-hint absolute bottom-4 sm:bottom-6 z-10 flex flex-col items-center gap-1.5 sm:gap-2">
@@ -236,9 +230,9 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════ */}
       <section className="relative w-full min-h-screen flex items-center py-16 sm:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(230,230,250,0.06)_0%,_transparent_60%)] pointer-events-none"></div>
-        <div className="max-w-6xl mx-auto w-full px-4 sm:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16 items-center z-10">
+        <div className="max-w-3xl mx-auto w-full px-4 sm:px-8 z-10 text-center">
           <div className="section-reveal space-y-4 sm:space-y-6">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center justify-center gap-3">
               <div className="h-px w-10 sm:w-12 bg-gradient-to-r from-transparent to-[#F8C8DC]"></div>
               <p className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.35em] text-[#F8C8DC]">{BIRTHDAY_CONFIG.chapters[0]?.badge}</p>
             </div>
@@ -251,12 +245,6 @@ export default function Home() {
                   {para}
                 </p>
               ))}
-            </div>
-          </div>
-          <div className="flex justify-center">
-            <div className="cinema-img float-y relative w-full max-w-[280px] sm:max-w-md">
-              <div className="absolute -inset-6 bg-gradient-to-tr from-[#E6E6FA]/25 to-[#F8C8DC]/20 rounded-3xl blur-3xl"></div>
-              <img src={BIRTHDAY_CONFIG.chapters[0]?.image} alt={BIRTHDAY_CONFIG.chapters[0]?.imageAlt} className="relative w-full rounded-2xl shadow-2xl shadow-purple-900/50 hover:shadow-[0_20px_60px_rgba(230,230,250,0.3)] transition-shadow duration-700" />
             </div>
           </div>
         </div>
@@ -295,15 +283,9 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════ */}
       <section className="relative w-full min-h-screen flex items-center py-16 sm:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,229,180,0.06)_0%,_transparent_60%)] pointer-events-none"></div>
-        <div className="max-w-6xl mx-auto w-full px-4 sm:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16 items-center z-10">
-          <div className="flex justify-center order-2 lg:order-1">
-            <div className="cinema-img float-y relative w-full max-w-[280px] sm:max-w-md">
-              <div className="absolute -inset-6 bg-gradient-to-tr from-[#FFD700]/20 to-[#FFE5B4]/20 rounded-3xl blur-3xl"></div>
-              <img src={BIRTHDAY_CONFIG.chapters[1]?.image} alt={BIRTHDAY_CONFIG.chapters[1]?.imageAlt} className="relative w-full rounded-2xl shadow-2xl shadow-amber-900/50 hover:shadow-[0_20px_60px_rgba(255,215,0,0.3)] transition-shadow duration-700" />
-            </div>
-          </div>
-          <div className="section-reveal space-y-4 sm:space-y-6 order-1 lg:order-2">
-            <div className="flex items-center gap-3">
+        <div className="max-w-3xl mx-auto w-full px-4 sm:px-8 z-10 text-center">
+          <div className="section-reveal space-y-4 sm:space-y-6">
+            <div className="flex items-center justify-center gap-3">
               <div className="h-px w-10 sm:w-12 bg-gradient-to-r from-transparent to-[#FFE5B4]"></div>
               <p className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.35em] text-[#FFE5B4]">{BIRTHDAY_CONFIG.chapters[1]?.badge}</p>
             </div>
@@ -356,9 +338,9 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════ */}
       <section className="relative w-full min-h-screen flex items-center py-16 sm:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(230,230,250,0.06)_0%,_transparent_50%)] pointer-events-none"></div>
-        <div className="max-w-6xl mx-auto w-full px-4 sm:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16 items-center z-10">
+        <div className="max-w-3xl mx-auto w-full px-4 sm:px-8 z-10 text-center">
           <div className="section-reveal space-y-4 sm:space-y-6">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center justify-center gap-3">
               <div className="h-px w-10 sm:w-12 bg-gradient-to-r from-transparent to-[#E6E6FA]"></div>
               <p className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.35em] text-[#E6E6FA]">{BIRTHDAY_CONFIG.chapters[2]?.badge}</p>
             </div>
@@ -373,12 +355,6 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="flex justify-center">
-            <div className="cinema-img float-y relative w-full max-w-[280px] sm:max-w-md">
-              <div className="absolute -inset-6 bg-gradient-to-tr from-[#E6E6FA]/20 to-[#FFD700]/15 rounded-3xl blur-3xl"></div>
-              <img src={BIRTHDAY_CONFIG.chapters[2]?.image} alt={BIRTHDAY_CONFIG.chapters[2]?.imageAlt} className="relative w-full rounded-2xl shadow-2xl shadow-indigo-900/50 hover:shadow-[0_20px_60px_rgba(230,230,250,0.3)] transition-shadow duration-700" />
-            </div>
-          </div>
         </div>
       </section>
 
@@ -387,15 +363,9 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════ */}
       <section className="relative w-full min-h-screen flex items-center py-16 sm:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(255,229,180,0.06)_0%,_transparent_60%)] pointer-events-none"></div>
-        <div className="max-w-6xl mx-auto w-full px-4 sm:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16 items-center z-10">
-          <div className="flex justify-center">
-            <div className="cinema-img float-y relative w-full max-w-[280px] sm:max-w-md">
-              <div className="absolute -inset-6 bg-gradient-to-tr from-[#FFE5B4]/20 to-[#F8C8DC]/20 rounded-3xl blur-3xl"></div>
-              <img src={BIRTHDAY_CONFIG.chapters[3]?.image} alt={BIRTHDAY_CONFIG.chapters[3]?.imageAlt} className="relative w-full rounded-2xl shadow-2xl shadow-orange-900/50 hover:shadow-[0_20px_60px_rgba(255,229,180,0.3)] transition-shadow duration-700" />
-            </div>
-          </div>
+        <div className="max-w-3xl mx-auto w-full px-4 sm:px-8 z-10 text-center">
           <div className="section-reveal space-y-4 sm:space-y-6">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center justify-center gap-3">
               <div className="h-px w-10 sm:w-12 bg-gradient-to-r from-transparent to-[#FFE5B4]"></div>
               <p className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.35em] text-[#FFE5B4]">{BIRTHDAY_CONFIG.chapters[3]?.badge}</p>
             </div>
@@ -418,9 +388,9 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════ */}
       <section className="relative w-full min-h-screen flex items-center py-16 sm:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,215,0,0.05)_0%,_transparent_60%)] pointer-events-none"></div>
-        <div className="max-w-6xl mx-auto w-full px-4 sm:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16 items-center z-10">
+        <div className="max-w-3xl mx-auto w-full px-4 sm:px-8 z-10 text-center">
           <div className="section-reveal space-y-4 sm:space-y-6">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center justify-center gap-3">
               <div className="h-px w-10 sm:w-12 bg-gradient-to-r from-transparent to-[#FFD700]"></div>
               <p className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.35em] text-[#FFD700]">{BIRTHDAY_CONFIG.chapters[4]?.badge}</p>
             </div>
@@ -435,12 +405,6 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="flex justify-center">
-            <div className="cinema-img float-y relative w-full max-w-[280px] sm:max-w-md">
-              <div className="absolute -inset-6 bg-gradient-to-tr from-[#FFD700]/20 to-[#F8C8DC]/15 rounded-3xl blur-3xl"></div>
-              <img src={BIRTHDAY_CONFIG.chapters[4]?.image} alt={BIRTHDAY_CONFIG.chapters[4]?.imageAlt} className="relative w-full rounded-2xl shadow-2xl shadow-amber-900/50 hover:shadow-[0_20px_60px_rgba(255,215,0,0.3)] transition-shadow duration-700" />
-            </div>
-          </div>
         </div>
       </section>
 
@@ -449,15 +413,9 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════ */}
       <section className="relative w-full min-h-screen flex items-center py-16 sm:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(230,230,250,0.06)_0%,_transparent_60%)] pointer-events-none"></div>
-        <div className="max-w-6xl mx-auto w-full px-4 sm:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16 items-center z-10">
-          <div className="flex justify-center">
-            <div className="cinema-img float-y relative w-full max-w-[280px] sm:max-w-md">
-              <div className="absolute -inset-6 bg-gradient-to-tr from-[#E6E6FA]/20 to-[#FFE5B4]/20 rounded-3xl blur-3xl"></div>
-              <img src={BIRTHDAY_CONFIG.chapters[5]?.image} alt={BIRTHDAY_CONFIG.chapters[5]?.imageAlt} className="relative w-full rounded-2xl shadow-2xl shadow-purple-900/50 hover:shadow-[0_20px_60px_rgba(230,230,250,0.3)] transition-shadow duration-700" />
-            </div>
-          </div>
+        <div className="max-w-3xl mx-auto w-full px-4 sm:px-8 z-10 text-center">
           <div className="section-reveal space-y-4 sm:space-y-6">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center justify-center gap-3">
               <div className="h-px w-10 sm:w-12 bg-gradient-to-r from-transparent to-[#E6E6FA]"></div>
               <p className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.35em] text-[#E6E6FA]">{BIRTHDAY_CONFIG.chapters[5]?.badge}</p>
             </div>
@@ -503,7 +461,6 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════ */}
       <section className="relative w-full min-h-screen flex items-center justify-center py-20 sm:py-24 overflow-hidden px-4 sm:px-8">
         <div className="absolute inset-0">
-          <img src="./assets/lanterns.png" alt="Floating lanterns" className="parallax-float w-full h-full object-cover opacity-50" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#060816] via-transparent to-[#060816]"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-[#060816]/80 via-transparent to-[#060816]/80"></div>
         </div>
@@ -522,7 +479,6 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════ */}
       <section className="finale-section relative w-full min-h-[120vh] flex items-center justify-center py-24 sm:py-28 overflow-hidden px-4 sm:px-8">
         <div className="absolute inset-0 pointer-events-none">
-          <img src="./assets/fireworks.png" alt="Fireworks" className="parallax-float w-full h-full object-cover opacity-50" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#060816] via-[#060816]/40 to-[#060816]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,215,0,0.1)_0%,_transparent_65%)]"></div>
         </div>
