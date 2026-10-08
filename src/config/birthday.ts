@@ -14,7 +14,6 @@ export interface StoryChapter {
 }
 
 export interface BirthdayConfig {
-  // 1. Basic Info
   birthdayPerson: {
     name: string;
     nickname: string;
@@ -26,16 +25,12 @@ export interface BirthdayConfig {
     relationship: string;
     signOffMessage: string;
   };
-
-  // 2. Entrance Gate (Screen before opening the gift)
   entrance: {
     badgeText: string;
     title: string;
     subtitle: string;
     buttonText: string;
   };
-
-  // 3. Hero Section (First visible screen after entrance)
   hero: {
     badgeText: string;
     title: string;
@@ -45,26 +40,18 @@ export interface BirthdayConfig {
     scrollHint: string;
     heroImage: string;
   };
-
-  // 4. Story Chapters (Timeline & Parallax Sections)
   chapters: StoryChapter[];
-
-  // 5. Interactive Flip Cards (Chapter Two)
   friendshipCardsSection: {
     badge: string;
     title: string;
     subtitle: string;
     cards: FriendshipCard[];
   };
-
-  // 6. Emotional Quotes Section
   quotesSection: {
     quote1: string;
     quote2: string;
     quote3: string;
   };
-
-  // 7. Interactive Birthday Cake Section
   cakeSection: {
     badge: string;
     title: string;
@@ -78,14 +65,10 @@ export interface BirthdayConfig {
     blowAllButtonText: string;
     reLightButtonText: string;
   };
-
-  // 8. Lanterns Section
   lanternsSection: {
     badge: string;
     title: string;
   };
-
-  // 9. Grand Finale Section
   finaleSection: {
     badge: string;
     titleLine1: string;
@@ -98,24 +81,17 @@ export interface BirthdayConfig {
     signOffName: string;
     footerNote: string;
   };
-
-  // 10. Background Music
   audio: {
     backgroundMusic: string;
     volume: number;
   };
 }
 
-/**
- * 🎂 RIDA'S BIRTHDAY — customized October 8, 2026
- * Romantic tone. No age number (age-agnostic copy).
- */
 const FRIEND_NAME = "Rida";
 const NICKNAME = "Riddi Piddi";
 const SENDER_NAME = "Hashir";
 
 export const BIRTHDAY_CONFIG: BirthdayConfig = {
-  // ─── 1. BASIC INFORMATION ───
   birthdayPerson: {
     name: FRIEND_NAME,
     nickname: `${NICKNAME} ✨`,
@@ -124,38 +100,33 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
   sender: {
     name: SENDER_NAME,
     relationship: "Someone who loves you",
-    signOffMessage: `Made with all my love for ${FRIEND_NAME}'s birthday 💛`,
+    signOffMessage: `Made with all my love for ${FRIEND_NAME}'s birthday 💗`,
   },
-
-  // ─── 2. ENTRANCE GATE ───
   entrance: {
-    badgeText: "💛 MADE WITH LOVE, FOR YOU 💛",
-    title: `Happy Birthday, ${FRIEND_NAME} ✨`,
-    subtitle: `My ${NICKNAME} — my favorite person in every universe. I built you a little world of gold and starlight, because you deserve to be celebrated like the queen you are. Ready?`,
+    badgeText: "💗 MADE WITH LOVE, FOR YOU 💗",
+    title: `HAPPPPYYYY BIRTHDAY ${FRIEND_NAME.toUpperCase()}!! 💗`,
+    subtitle:
+      "MY CUEST MUTEST PRETTIEST JANU MANU — I made you something special and I'm sending it to you this sham. Ready??",
     buttonText: "OPEN YOUR SPECIAL GIFT 🎁",
   },
-
-  // ─── 3. HERO SECTION ───
   hero: {
-    badgeText: "💛 HAPPY BIRTHDAY MY LOVE 💛",
+    badgeText: "💗 HAPPPPYYYY BIRTHDAY MY LOVE 💗",
     title: `${FRIEND_NAME} ✨`,
     taglineBefore: "To",
     highlightText: `my ${NICKNAME}`,
     taglineAfter:
-      "— the girl who stole my heart and makes every single day brighter. This is all for you.",
+      "— MY CUEST MUTEST PRETTIEST BEAUTIFUL AND SO SO SO CUTEEEEEEE JANU MANU. I LOVE YOU SO MUCHHHHHHH. This whole thing is for YOU.",
     scrollHint: "Scroll to explore",
     heroImage: "./assets/hero.png",
   },
-
-  // ─── 4. STORY CHAPTERS ───
   chapters: [
     {
       id: "chapter-1",
       badge: "Chapter One",
-      title: "The Day My World Changed",
+      title: "THE DAY MY JANU MANU WAS BORN",
       paragraphs: [
-        `They say the best things come into your life when you least expect them. You didn't just walk into my life, ${NICKNAME} — you made it home.`,
-        "Today we celebrate the day the universe decided I deserved someone as wonderful as you.",
+        "HAPPPPYYYY HAPPY BIRTHDAY TO MY CUEST MUTEST PRETTIEST BEAUTIFUL AND SO SO SO CUTEEEEEEE JANU MANU!! I LOVE YOU SO MUCHHHHHHHHHHH 💗💗",
+        "I wish I could send you gifts yar ☹️☹️ BUT ISSSOKKK — I prepared something for you instead, and you're looking at it RIGHT NOW. This whole little world is yours.",
       ],
       image: "./assets/intro.png",
       imageAlt: "A golden gift for Rida",
@@ -163,10 +134,10 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
     {
       id: "chapter-3",
       badge: "Chapter Three",
-      title: "You Give Me Wings",
+      title: "STOP TALKING BAD ABOUT YOURSELF",
       paragraphs: [
-        "Behind every dream I chase, there's you — believing in me even on the days I don't believe in myself.",
-        "Your love is the reason I dare to fly higher. Everything good in me has your fingerprints on it.",
+        "RIDA YOU'RE LIKE THE BEST HUMAN BEING EVER AND I LOVE U SO MUCH. And I JS DON'T LIKE HOW U TALK BAD ABOUT YOURSELF.",
+        "Don't EVER EVER say you're not pretty or anything, okay?? YOU ARE LITR SO CUTE, SO PRETTY. My eyes work perfectly fine — trust me on this one.",
       ],
       image: "./assets/wings.png",
       imageAlt: "Golden wings",
@@ -174,10 +145,10 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
     {
       id: "chapter-4",
       badge: "Chapter Four",
-      title: "Written in the Stars",
+      title: "THE NO-STUDY CHALLENGE",
       paragraphs: [
-        "Out of billions of people in this world, my heart found you. If that's not destiny, I don't know what is.",
-        `Like a constellation, every little thing about you — your laugh, your warmth, your spark — lights up my entire sky. Happy birthday, ${NICKNAME}.`,
+        "OKAY GIRL LISTEN. AJ DON'T TOUCH YOUR BOOOKS. Don't sirf study today — it's YOUR b'day!! Go out with your family, eat good food, and JS LIKE FOCUS ON HAVING A GOOOD TINEEEEEEEEEE.",
+        "Don't worry bout anything else today. AJ APNE BAS ENJOY KARNA HAI. Your books will survive one day without you, I promise.",
       ],
       image: "./assets/friendship.png",
       imageAlt: "Love constellation",
@@ -185,10 +156,10 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
     {
       id: "chapter-5",
       badge: "Chapter Five",
-      title: "My Favorite Person",
+      title: "MWAHHH 💗",
       paragraphs: [
-        "Your laugh is my favorite sound. Your smile is my favorite sight.",
-        "And you — you're my favorite everything. Today, the whole world gets to celebrate what I celebrate every day: you.",
+        "YOU BRING SO SO MUCH HAPPINESS TO ME, MERI JANNN. Like you don't even understand?? You're such an amazing person and you deserve EVERYTHING.",
+        "So celebrate accordingly!! Be happy, eat cake, and remember someone loves you SOOOOO MUCHJHH. MWAHHH.",
       ],
       image: "./assets/heart.png",
       imageAlt: "Golden heart",
@@ -196,10 +167,10 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
     {
       id: "chapter-6",
       badge: "Chapter Six",
-      title: "Our Story",
+      title: "OUR LITTLE UNIVERSE",
       paragraphs: [
-        "Every love story is beautiful, but ours is my favorite — the late-night talks, the silly jokes, the way you just get me.",
-        "And the best part? We're still writing it. The next chapters are going to be even better.",
+        "Every love story is cute but ours?? Ours is the CUTEST, no debate. The late-night talks, the silly jokes, the way you just get me.",
+        "And we're just getting started, JANU MANU. The best chapters are still coming — I can feel it.",
       ],
       image: "./assets/book.png",
       imageAlt: "Our storybook",
@@ -207,108 +178,97 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
     {
       id: "chapter-7",
       badge: "Chapter Seven",
-      title: "Forever & Always",
+      title: "FOREVER YOURS, OKAY?",
       paragraphs: [
-        "Like the deepest roots, what I feel for you only grows stronger with time — through every season, every storm, every sunshine.",
-        `Happy birthday, my love. Here's to us — today, tomorrow, always.`,
+        "Like literally forever. You're my person and I'm not sharing you with anyone, sorry not sorry.",
+        "HAPPUUYY BIRTHDAY AGAINNNNNN, meri jan 💗💗💗💗",
       ],
       image: "./assets/tree.png",
       imageAlt: "Tree of love",
     },
   ],
-
-  // ─── 5. INTERACTIVE FLIP CARDS ───
   friendshipCardsSection: {
     badge: "Chapter Two",
-    title: "Reasons You're My Everything",
-    subtitle: "Tap each card — every one of them is true.",
+    title: "THINGS I LOVE ABOUT YOU",
+    subtitle: "Tap each card okay?? Every single one is true.",
     cards: [
       {
         emoji: "🌸",
         title: NICKNAME,
-        text: "The name only I call you — because you're the only one who makes my heart do that little jump.",
+        text: "My silly little name for you. You're the only janu manu in the whole world, and you're MINE.",
       },
       {
         emoji: "✨",
-        title: "Your Smile",
-        text: "One smile from you and my worst days turn into my best ones. It's basically magic at this point.",
+        title: "SO PRETTY",
+        text: "Don't ever talk bad about yourself again, okay?? You are LITR so cute, so pretty. My eyes are perfect. Case closed.",
       },
       {
         emoji: "💛",
-        title: "My Home",
-        text: `Home isn't a place, ${NICKNAME}. It's wherever you are — your laugh, your warmth, your arms.`,
+        title: "MY HAPPINESS",
+        text: "You bring SO SO much happiness to me. My whole mood does a backflip the second you text me.",
       },
       {
         emoji: "🌙",
-        title: "Midnight Us",
-        text: "My favorite time of day is whenever I'm talking to you — even if the whole world is asleep.",
+        title: "MIDNIGHT TALKS",
+        text: "Best part of my day = talking to you while the whole world is asleep. Don't ever stop.",
       },
       {
         emoji: "🎯",
-        title: "My Dream Come True",
-        text: "I used to wish on stars. Then I met you, and I stopped — because my wish had already come true.",
+        title: "MERI JANNN",
+        text: "Meri jannnn, my everything. I love you so much it's actually stupid.",
       },
       {
         emoji: "🤝",
-        title: "My Person",
-        text: "In every lifetime, in every universe, I'd find you and I'd choose you. Every single time.",
+        title: "PARTNER IN CRIME",
+        text: "Every plan, every silly idea, every 3am thought — I want you there for all of it. Forever.",
       },
     ],
   },
-
-  // ─── 6. QUOTES ───
   quotesSection: {
     quote1:
-      "I love you not because of who you are, but because of who I am when I'm with you.",
+      "HAPPPPYYYY BIRTHDAY TO THE PRETTIEST GIRL IN THE WORLD. Yes I'm talking about you. Don't argue.",
     quote2:
-      "You are my today, my tomorrow, and every beautiful moment in between.",
+      "You deserve all the happiness, all the cake, and all my love. Today and every single day.",
     quote3:
-      "If I had one wish, I'd wish to relive every moment with you — over and over, forever.",
+      "AJ APNE BAS ENJOY KARNA HAI — everything else can wait. It's YOUR day, janu manu. 💗",
   },
-
-  // ─── 7. INTERACTIVE BIRTHDAY CAKE SECTION ───
   cakeSection: {
     badge: "Interactive Birthday Celebration",
     title: "Blow Out The Candles!",
     subtitle:
-      "Make your birthday wish, blow out the candles, and watch the magic happen! ✨",
+      "Make a wish janu manu — make it a GOOD one!! Then blow out the candles ✨",
     tapToRevealTitle: "TAP TO REVEAL YOUR BIRTHDAY CAKE!",
-    tapToRevealSubtitle: "A special surprise is waiting for you inside ✨",
+    tapToRevealSubtitle: "Something yummy is waiting for you inside ✨",
     instructionBannerTitle: "🕯️ TAP EACH CANDLE OR THE BUTTON BELOW! 🕯️",
     instructionBannerSubtitle:
       "Make your birthday wish and blow out the candles!",
-    celebrationTitle: "HAPPY BIRTHDAY MY LOVE!",
-    celebrationSubtitle: `You blew out all the candles! Close your eyes, my ${NICKNAME} — everything you wished for is already on its way. Happy birthday to the girl who has my whole heart ✨`,
+    celebrationTitle: "HAPPPPYYYY BIRTHDAY MY LOVE!!",
+    celebrationSubtitle:
+      "YOU DID IT!! Now close your eyes and wish for EVERYTHING — you deserve it ALL, meri jan. Happy birthday to the cutest girl alive ✨💗",
     blowAllButtonText: "BLOW ALL CANDLES AT ONCE",
     reLightButtonText: "Light Candles Again 🕯️",
   },
-
-  // ─── 8. LANTERNS SECTION ───
   lanternsSection: {
     badge: "Chapter Eight",
     title:
-      "May every dream we dream together take flight like these lanterns into the infinite sky",
+      "May every wish you make tonight fly up like these lanterns — and may they ALL come true ✨",
   },
-
-  // ─── 9. GRAND FINALE SECTION ───
   finaleSection: {
-    badge: "💛 HAPPY BIRTHDAY MY LOVE 💛",
+    badge: "💗 HAPPPPYYYY BIRTHDAY MERI JAN 💗",
     titleLine1: "HAPPIEST",
     titleLine2: "BIRTHDAY",
     bridgeText: "To My",
-    nameText: `${FRIEND_NAME.toUpperCase()} 👑`,
+    nameText: `${FRIEND_NAME.toUpperCase()}`,
     wishesParagraphs: [
-      `Happy birthday, my ${NICKNAME}! I wish you a year as beautiful as your soul — full of laughter, success, and all the love you give so freely, returned to you a hundredfold.`,
-      "May your smile always shine brighter than every star in the night sky.",
-      "Thank you for being the best part of my life. I love you — today, tomorrow, always.",
+      `HAPPUUYY BIRTHDAY AGAINNNNNN, my ${NICKNAME}!! I LOVE YOU SO MUCHHHHHHH and I just want you to have the BEST day ever.`,
+      "Go out with your family, eat lots of cake, DON'T touch your books, and just enjoy. AJ APNE BAS ENJOY KARNA HAI, okay??",
+      "You bring so so much happiness to me and you deserve everything. MWAHHH. Forever yours. 💗",
     ],
     signOffPreText: "Forever and always, with all my heart",
     signOffRelationship: "YOURS ONLY",
     signOffName: SENDER_NAME.toUpperCase(),
-    footerNote: `Made with all my love for ${FRIEND_NAME}'s birthday 💛`,
+    footerNote: `Made with all my love for ${FRIEND_NAME}'s birthday 💗💗💗`,
   },
-
-  // ─── 10. BACKGROUND MUSIC ───
   audio: {
     backgroundMusic: "./audio/birthday.mp3",
     volume: 0.6,
