@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-deep-midnight: #060816;
-  --color-primary-pink: #F8C8DC;
-  --color-secondary-lavender: #E6E6FA;
-  --color-accent-peach: #FFE5B4;
-  --color-glow-gold: #FFD700;
+  --color-deep-midnight: #FFE3EC;
+  --color-primary-pink: #F9A8C9;
+  --color-secondary-lavender: #FBCFE8;
+  --color-accent-peach: #FB7185;
+  --color-glow-gold: #F43F5E;
   --font-sans: var(--font-inter);
 }
 
 @layer base {
-  :root { --background: #060816; --foreground: #ffffff; }
+  :root { --background: #FFE3EC; --foreground: #3A2A33; }
 }
 
 * { box-sizing: border-box; }
@@ -25,17 +25,17 @@ body {
 
 /* ═══ GLASS CARD ═══ */
 .glass-card {
-  background: rgba(255,255,255,0.04);
+  background: rgba(255,255,255,0.55);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(244,63,94,0.14);
   border-radius: 1rem;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05);
+  box-shadow: 0 8px 32px rgba(244,63,94,0.10), inset 0 1px 0 rgba(255,255,255,0.4);
   transition: border-color 0.4s, box-shadow 0.4s, transform 0.4s;
 }
 .glass-card:hover {
-  border-color: rgba(255,255,255,0.15);
-  box-shadow: 0 16px 48px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.08), 0 0 40px rgba(248,200,220,0.08);
+  border-color: rgba(244,63,94,0.28);
+  box-shadow: 0 16px 48px rgba(244,63,94,0.16), inset 0 1px 0 rgba(255,255,255,0.5), 0 0 40px rgba(244,63,94,0.12);
   transform: translateY(-4px);
 }
 
@@ -43,27 +43,27 @@ body {
 .stars-layer {
   position: absolute; inset: 0;
   background-image:
-    radial-gradient(2px 2px at 20px 30px,rgba(255,255,255,.9),transparent),
-    radial-gradient(2px 2px at 40px 70px,rgba(255,255,255,.7),transparent),
-    radial-gradient(1px 1px at 90px 40px,rgba(255,255,255,.5),transparent),
-    radial-gradient(2px 2px at 160px 120px,rgba(255,255,255,.8),transparent),
-    radial-gradient(1px 1px at 200px 60px,rgba(255,255,255,.6),transparent),
-    radial-gradient(2px 2px at 300px 200px,rgba(255,255,255,.9),transparent),
-    radial-gradient(1px 1px at 350px 80px,rgba(255,255,255,.4),transparent),
-    radial-gradient(2px 2px at 420px 180px,rgba(255,255,255,.7),transparent),
-    radial-gradient(1px 1px at 500px 250px,rgba(255,255,255,.5),transparent),
-    radial-gradient(2px 2px at 580px 140px,rgba(255,255,255,.8),transparent);
+    radial-gradient(2px 2px at 20px 30px,rgba(244,63,94,.28),transparent),
+    radial-gradient(2px 2px at 40px 70px,rgba(251,113,133,.22),transparent),
+    radial-gradient(1px 1px at 90px 40px,rgba(249,168,201,.25),transparent),
+    radial-gradient(2px 2px at 160px 120px,rgba(244,63,94,.28),transparent),
+    radial-gradient(1px 1px at 200px 60px,rgba(251,113,133,.22),transparent),
+    radial-gradient(2px 2px at 300px 200px,rgba(249,168,201,.25),transparent),
+    radial-gradient(1px 1px at 350px 80px,rgba(244,63,94,.28),transparent),
+    radial-gradient(2px 2px at 420px 180px,rgba(251,113,133,.22),transparent),
+    radial-gradient(1px 1px at 500px 250px,rgba(249,168,201,.25),transparent),
+    radial-gradient(2px 2px at 580px 140px,rgba(244,63,94,.28),transparent);
   background-size: 600px 300px;
   animation: drift 120s linear infinite;
 }
 .stars-layer-2 {
   position: absolute; inset: 0;
   background-image:
-    radial-gradient(1px 1px at 50px 100px,rgba(248,200,220,.6),transparent),
-    radial-gradient(2px 2px at 150px 200px,rgba(230,230,250,.5),transparent),
-    radial-gradient(1px 1px at 250px 50px,rgba(255,229,180,.4),transparent),
-    radial-gradient(2px 2px at 350px 150px,rgba(255,215,0,.3),transparent),
-    radial-gradient(1px 1px at 450px 250px,rgba(248,200,220,.5),transparent);
+    radial-gradient(1px 1px at 50px 100px,rgba(244,63,94,.28),transparent),
+    radial-gradient(2px 2px at 150px 200px,rgba(251,113,133,.22),transparent),
+    radial-gradient(1px 1px at 250px 50px,rgba(249,168,201,.25),transparent),
+    radial-gradient(2px 2px at 350px 150px,rgba(244,63,94,.28),transparent),
+    radial-gradient(1px 1px at 450px 250px,rgba(251,113,133,.22),transparent);
   background-size: 700px 400px;
   animation: drift 200s linear infinite reverse;
 }
@@ -86,16 +86,16 @@ body {
 }
 .cinema-img:hover img {
   transform: scale(1.04) translateY(-6px);
-  box-shadow: 0 30px 80px rgba(248,200,220,0.2), 0 0 120px rgba(230,230,250,0.1);
+  box-shadow: 0 30px 80px rgba(244,63,94,0.2), 0 0 120px rgba(251,113,133,0.12);
 }
 
 /* ═══ SCROLLBAR ═══ */
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: #060816; }
-::-webkit-scrollbar-thumb { background: rgba(248,200,220,0.25); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(248,200,220,0.45); }
+::-webkit-scrollbar-track { background: #FFE3EC; }
+::-webkit-scrollbar-thumb { background: rgba(244,63,94,.35); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(244,63,94,.55); }
 
-::selection { background: rgba(248,200,220,0.3); color: white; }
+::selection { background: rgba(244,63,94,.25); color: #3A2A33; }
 
 /* ═══ ANIMATED BACKGROUND ═══ */
 body::before {
@@ -104,9 +104,9 @@ body::before {
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(248,200,220,0.04) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(230,230,250,0.04) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 80%, rgba(255,215,0,0.03) 0%, transparent 50%);
+    radial-gradient(ellipse at 20% 50%, rgba(244,63,94,.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(251,113,133,.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(244,63,94,.05) 0%, transparent 50%);
   animation: bg-shift 20s ease-in-out infinite alternate;
 }
 

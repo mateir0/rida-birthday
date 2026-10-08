@@ -43,7 +43,7 @@ export default function ParticleCanvas() {
       vy: isMouse ? -(Math.random() * 2 + 1) : -(Math.random() * 0.5 + 0.1),
       size: Math.random() * (isMouse ? 4 : 2.5) + 0.5,
       opacity: Math.random() * 0.6 + 0.2,
-      hue: [340, 45, 260, 30][Math.floor(Math.random() * 4)],
+      hue: [340, 330, 350, 315][Math.floor(Math.random() * 4)],
       life: 0,
       maxLife: isMouse ? 60 + Math.random() * 40 : 200 + Math.random() * 300,
     });

@@ -53,7 +53,7 @@ export default function MusicPlayer({
         type="button"
         onClick={toggle}
         aria-label={playing ? 'Pause music' : 'Play music'}
-        className="w-12 h-12 rounded-full flex items-center justify-center text-xl bg-[#FFD700]/15 border border-[#FFD700]/50 text-[#FFD700] backdrop-blur-md shadow-[0_0_20px_rgba(255,215,0,0.35)] hover:shadow-[0_0_30px_rgba(255,215,0,0.55)] active:scale-95 transition-all cursor-pointer"
+        className="w-12 h-12 rounded-full flex items-center justify-center text-xl bg-[#F43F5E]/15 border border-[#F43F5E]/50 text-[#F43F5E] backdrop-blur-md shadow-[0_0_20px_rgba(244,63,94,0.35)] hover:shadow-[0_0_30px_rgba(244,63,94,0.55)] active:scale-95 transition-all cursor-pointer"
       >
         {playing ? '🔊' : '🔇'}
       </button>

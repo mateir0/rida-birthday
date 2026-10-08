@@ -20,7 +20,7 @@ export default function CakeInteraction() {
         ...opts,
         origin: { x, y: y - 0.1 },
         particleCount: Math.floor(280 * particleRatio),
-        colors: ['#F8C8DC', '#E6E6FA', '#FFE5B4', '#FFD700', '#ffffff', '#FF6B6B']
+        colors: ['#F9A8C9', '#FBCFE8', '#FB7185', '#F43F5E', '#ffffff']
       });
     };
 
@@ -31,12 +31,12 @@ export default function CakeInteraction() {
     fire(0.1, { spread: 120, startVelocity: 45 });
 
     setTimeout(() => {
-      confetti({ particleCount: 200, spread: 180, origin: { x: 0.5, y: 0.6 }, colors: ['#F8C8DC', '#FFD700', '#E6E6FA'] });
+      confetti({ particleCount: 200, spread: 180, origin: { x: 0.5, y: 0.6 }, colors: ['#F9A8C9', '#F43F5E', '#FBCFE8'] });
     }, 500);
 
     setTimeout(() => {
-      confetti({ particleCount: 150, spread: 160, origin: { x: 0.2, y: 0.5 }, colors: ['#FFD700', '#F8C8DC'] });
-      confetti({ particleCount: 150, spread: 160, origin: { x: 0.8, y: 0.5 }, colors: ['#E6E6FA', '#FFE5B4'] });
+      confetti({ particleCount: 150, spread: 160, origin: { x: 0.2, y: 0.5 }, colors: ['#F43F5E', '#F9A8C9'] });
+      confetti({ particleCount: 150, spread: 160, origin: { x: 0.8, y: 0.5 }, colors: ['#FBCFE8', '#FB7185'] });
     }, 1000);
   };
 
@@ -74,17 +74,17 @@ export default function CakeInteraction() {
           onTouchEnd={handleReveal}
           className="group relative cursor-pointer w-full max-w-md touch-manipulation active:scale-95 transition-transform duration-300 z-30 pointer-events-auto select-none"
         >
-          <div className="absolute -inset-2 bg-gradient-to-r from-[#F8C8DC] via-[#FFD700] to-[#E6E6FA] rounded-2xl opacity-50 blur-xl group-hover:opacity-85 transition-all duration-700 animate-pulse-slow pointer-events-none"></div>
-          <div className="relative glass-card p-6 sm:p-10 rounded-2xl text-center space-y-4 border-2 border-white/30 group-hover:border-white/60 transition-all duration-500 pointer-events-none">
+          <div className="absolute -inset-2 bg-gradient-to-r from-[#F9A8C9] via-[#F43F5E] to-[#E64980] rounded-2xl opacity-50 blur-xl group-hover:opacity-85 transition-all duration-700 animate-pulse-slow pointer-events-none"></div>
+          <div className="relative glass-card p-6 sm:p-10 rounded-2xl text-center space-y-4 border-2 border-[#F43F5E]/30 group-hover:border-[#F43F5E]/50 transition-all duration-500 pointer-events-none">
             <div className="flex justify-center gap-2 pointer-events-none">
               <span className="text-4xl sm:text-5xl animate-bounce">🎂</span>
               <span className="text-4xl sm:text-5xl animate-bounce" style={{ animationDelay: '0.2s' }}>✨</span>
               <span className="text-4xl sm:text-5xl animate-bounce" style={{ animationDelay: '0.4s' }}>👑</span>
             </div>
-            <h3 className="text-lg sm:text-2xl font-black text-white tracking-wider uppercase pointer-events-none">
+            <h3 className="text-lg sm:text-2xl font-black text-[#3A2A33] tracking-wider uppercase pointer-events-none">
               {BIRTHDAY_CONFIG.cakeSection.tapToRevealTitle}
             </h3>
-            <p className="text-xs sm:text-base text-[#FFD700] font-medium pointer-events-none">
+            <p className="text-xs sm:text-base text-[#F43F5E] font-medium pointer-events-none">
               {BIRTHDAY_CONFIG.cakeSection.tapToRevealSubtitle}
             </p>
           </div>
@@ -98,12 +98,12 @@ export default function CakeInteraction() {
           {/* Instruction Banner */}
           {!allBlown && (
             <div className="relative w-full max-w-lg pointer-events-none">
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#FFD700]/40 to-[#F8C8DC]/40 rounded-2xl blur-md animate-pulse-slow"></div>
-              <div className="relative glass-card p-4 sm:p-6 rounded-2xl border-2 border-[#FFD700]/50 text-center space-y-2">
-                <p className="text-sm sm:text-lg font-bold text-[#FFD700] tracking-wide">
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#F43F5E]/40 to-[#F9A8C9]/40 rounded-2xl blur-md animate-pulse-slow"></div>
+              <div className="relative glass-card p-4 sm:p-6 rounded-2xl border-2 border-[#F43F5E]/50 text-center space-y-2">
+                <p className="text-sm sm:text-lg font-bold text-[#F43F5E] tracking-wide">
                   {BIRTHDAY_CONFIG.cakeSection.instructionBannerTitle}
                 </p>
-                <p className="text-xs sm:text-sm text-white/70">
+                <p className="text-xs sm:text-sm text-[#3A2A33]/70">
                   {BIRTHDAY_CONFIG.cakeSection.instructionBannerSubtitle}
                 </p>
               </div>
@@ -112,13 +112,13 @@ export default function CakeInteraction() {
 
           {allBlown && (
             <div className="relative w-full max-w-lg animate-fade-in pointer-events-none">
-              <div className="absolute -inset-2 bg-gradient-to-r from-[#FFD700]/60 to-[#F8C8DC]/60 rounded-2xl blur-xl animate-pulse-slow"></div>
-              <div className="relative glass-card p-6 sm:p-8 rounded-2xl text-center space-y-3 border-2 border-[#FFD700]">
+              <div className="absolute -inset-2 bg-gradient-to-r from-[#F43F5E]/60 to-[#F9A8C9]/60 rounded-2xl blur-xl animate-pulse-slow"></div>
+              <div className="relative glass-card p-6 sm:p-8 rounded-2xl text-center space-y-3 border-2 border-[#F43F5E]">
                 <div className="flex justify-center gap-2 text-3xl sm:text-4xl">🎉 👑 🎂 ✨</div>
-                <h3 className="text-xl sm:text-4xl font-black text-[#FFD700] tracking-wide">
+                <h3 className="text-xl sm:text-4xl font-black text-[#F43F5E] tracking-wide">
                   {BIRTHDAY_CONFIG.cakeSection.celebrationTitle}
                 </h3>
-                <p className="text-xs sm:text-base text-white/90 leading-relaxed font-light">
+                <p className="text-xs sm:text-base text-[#3A2A33]/90 leading-relaxed font-light">
                   {BIRTHDAY_CONFIG.cakeSection.celebrationSubtitle}
                 </p>
               </div>
@@ -127,7 +127,7 @@ export default function CakeInteraction() {
 
           {/* The Cake & Interactive Topper Area */}
           <div className="relative my-6 sm:my-8 z-20">
-            <div className={`absolute -inset-10 rounded-full blur-3xl transition-all duration-1000 pointer-events-none ${allBlown ? 'bg-gradient-to-r from-[#FFD700]/60 via-[#F8C8DC]/60 to-[#E6E6FA]/60 scale-125 opacity-100' : 'bg-[#F8C8DC]/15 opacity-60'}`}></div>
+            <div className={`absolute -inset-10 rounded-full blur-3xl transition-all duration-1000 pointer-events-none ${allBlown ? 'bg-gradient-to-r from-[#F43F5E]/60 via-[#F9A8C9]/60 to-[#FBCFE8]/60 scale-125 opacity-100' : 'bg-[#F9A8C9]/15 opacity-60'}`}></div>
             
             <div className="relative flex flex-col items-center pointer-events-none">
               {/* ── AFTER BLOWING CANDLES: Reveal the Magical "20" Sparkler Candle Topper! ── */}
@@ -135,20 +135,20 @@ export default function CakeInteraction() {
                 <div className="absolute -top-20 sm:-top-28 z-30 flex flex-col items-center animate-bounce pointer-events-none">
                   {/* Sparkler fire effects above the 20 */}
                   <div className="flex gap-6 sm:gap-10 mb-1">
-                    <div className="w-5 sm:w-6 h-8 sm:h-10 rounded-full bg-gradient-to-t from-[#FF6B00] via-[#FFD700] to-[#ffffff] animate-flame shadow-[0_0_30px_#FFD700,0_0_60px_#FF6B00,0_-15px_35px_#FFD700]"></div>
-                    <div className="w-5 sm:w-6 h-8 sm:h-10 rounded-full bg-gradient-to-t from-[#FF6B00] via-[#FFD700] to-[#ffffff] animate-flame shadow-[0_0_30px_#FFD700,0_0_60px_#FF6B00,0_-15px_35px_#FFD700]" style={{ animationDelay: '0.15s' }}></div>
+                    <div className="w-5 sm:w-6 h-8 sm:h-10 rounded-full bg-gradient-to-t from-[#E64980] via-[#F43F5E] to-[#ffffff] animate-flame shadow-[0_0_30px_#F43F5E,0_0_60px_#E64980,0_-15px_35px_#F43F5E]"></div>
+                    <div className="w-5 sm:w-6 h-8 sm:h-10 rounded-full bg-gradient-to-t from-[#E64980] via-[#F43F5E] to-[#ffffff] animate-flame shadow-[0_0_30px_#F43F5E,0_0_60px_#E64980,0_-15px_35px_#F43F5E]" style={{ animationDelay: '0.15s' }}></div>
                   </div>
 
                   {/* Big Glowing 20 Number Badge */}
-                  <div className="bg-gradient-to-r from-[#FFD700] via-[#FFF8E1] to-[#FFD700] text-[#060816] font-black text-3xl sm:text-5xl px-8 sm:px-12 py-3 sm:py-4 rounded-full border-4 border-white shadow-[0_0_50px_rgba(255,215,0,0.9)] flex items-center gap-3 tracking-tighter">
+                  <div className="bg-gradient-to-r from-[#FB7185] via-[#F43F5E] to-[#E64980] text-white font-black text-3xl sm:text-5xl px-8 sm:px-12 py-3 sm:py-4 rounded-full border-4 border-white shadow-[0_0_50px_rgba(244,63,94,0.9)] flex items-center gap-3 tracking-tighter">
                     <span className="animate-spin" style={{ animationDuration: '4s' }}>✨</span>
                     <span>{BIRTHDAY_CONFIG.birthdayPerson.age}</span>
                     <span className="animate-spin" style={{ animationDuration: '4s' }}>✨</span>
                   </div>
                   {/* Topper Sticks going into cake */}
                   <div className="flex gap-8">
-                    <div className="w-1.5 h-10 sm:h-14 bg-gradient-to-b from-[#FFD700] via-white to-transparent shadow-md"></div>
-                    <div className="w-1.5 h-10 sm:h-14 bg-gradient-to-b from-[#FFD700] via-white to-transparent shadow-md"></div>
+                    <div className="w-1.5 h-10 sm:h-14 bg-gradient-to-b from-[#F43F5E] via-white to-transparent shadow-md"></div>
+                    <div className="w-1.5 h-10 sm:h-14 bg-gradient-to-b from-[#F43F5E] via-white to-transparent shadow-md"></div>
                   </div>
                 </div>
               )}
@@ -157,7 +157,7 @@ export default function CakeInteraction() {
               <img
                 src="./assets/cake.png"
                 alt={`${BIRTHDAY_CONFIG.birthdayPerson.age}th Birthday Cake`}
-                className={`w-64 sm:w-80 md:w-[28rem] rounded-3xl shadow-2xl transition-all duration-1000 pointer-events-none ${allBlown ? 'shadow-[0_0_140px_rgba(255,215,0,0.7)] scale-105' : 'shadow-pink-900/40'}`}
+                className={`w-64 sm:w-80 md:w-[28rem] rounded-3xl shadow-2xl transition-all duration-1000 pointer-events-none ${allBlown ? 'shadow-[0_0_140px_rgba(244,63,94,0.7)] scale-105' : 'shadow-[#F43F5E]/30'}`}
               />
 
               {/* ── BEFORE BLOWING CANDLES: Show the 5 Interactive Lit Candles ── */}
@@ -175,17 +175,17 @@ export default function CakeInteraction() {
                       {/* Flame */}
                       {lit && (
                         <div className="relative mb-1 pointer-events-none">
-                          <div className="w-4 sm:w-5 h-6 sm:h-8 rounded-full bg-gradient-to-t from-[#FF6B00] via-[#FFD700] to-[#FFF8E1] animate-flame shadow-[0_0_20px_#FFD700,0_0_40px_#FF6B00,0_-10px_25px_#FFD700]"></div>
-                          <div className="absolute -inset-3 rounded-full bg-[#FFD700]/30 blur-md group-hover:bg-[#FFD700]/60 transition-colors"></div>
+                          <div className="w-4 sm:w-5 h-6 sm:h-8 rounded-full bg-gradient-to-t from-[#E64980] via-[#F43F5E] to-[#FFF1F2] animate-flame shadow-[0_0_20px_#F43F5E,0_0_40px_#E64980,0_-10px_25px_#F43F5E]"></div>
+                          <div className="absolute -inset-3 rounded-full bg-[#F43F5E]/30 blur-md group-hover:bg-[#F43F5E]/60 transition-colors"></div>
                         </div>
                       )}
                       {!lit && (
                         <div className="relative mb-1 h-6 sm:h-8 flex items-end justify-center pointer-events-none">
-                          <div className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-white/20"></div>
+                          <div className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-[#F43F5E]/15"></div>
                         </div>
                       )}
                       {/* Candle stick */}
-                      <div className={`w-3 sm:w-4 h-10 sm:h-14 rounded-md transition-all duration-500 shadow-md border border-white/20 pointer-events-none ${lit ? 'bg-gradient-to-b from-[#FFF8E1] via-[#F8C8DC] to-[#E6B3C8]' : 'bg-white/20'}`}></div>
+                      <div className={`w-3 sm:w-4 h-10 sm:h-14 rounded-md transition-all duration-500 shadow-md border border-[#F43F5E]/20 pointer-events-none ${lit ? 'bg-gradient-to-b from-[#FFF1F2] via-[#F9A8C9] to-[#F4729B]' : 'bg-[#F43F5E]/15'}`}></div>
                     </button>
                   ))}
                 </div>
@@ -200,12 +200,12 @@ export default function CakeInteraction() {
                 type="button"
                 onClick={blowAllAtOnce}
                 onTouchEnd={blowAllAtOnce}
-                className="w-full py-4 px-6 rounded-full bg-gradient-to-r from-[#FFD700] via-[#FFE5B4] to-[#F8C8DC] text-[#060816] font-black text-sm sm:text-lg uppercase tracking-wider shadow-[0_0_25px_rgba(255,215,0,0.4)] hover:shadow-[0_0_40px_rgba(255,215,0,0.7)] active:scale-95 transition-all duration-300 cursor-pointer touch-manipulation flex items-center justify-center gap-2 pointer-events-auto select-none z-30"
+                className="w-full py-4 px-6 rounded-full bg-gradient-to-r from-[#FB7185] via-[#F43F5E] to-[#E64980] text-white font-black text-sm sm:text-lg uppercase tracking-wider shadow-[0_0_25px_rgba(244,63,94,0.4)] hover:shadow-[0_0_40px_rgba(244,63,94,0.7)] active:scale-95 transition-all duration-300 cursor-pointer touch-manipulation flex items-center justify-center gap-2 pointer-events-auto select-none z-30"
               >
                 <span className="pointer-events-none">{BIRTHDAY_CONFIG.cakeSection.blowAllButtonText}</span>
                 <span className="pointer-events-none">💨</span>
               </button>
-              <p className="text-[11px] sm:text-sm text-white/60 tracking-widest uppercase font-semibold pointer-events-none">
+              <p className="text-[11px] sm:text-sm text-[#3A2A33]/60 tracking-widest uppercase font-semibold pointer-events-none">
                 {candlesLit.filter(c => c).length} candle{candlesLit.filter(c => c).length !== 1 ? 's' : ''} remaining
               </p>
             </div>
@@ -224,7 +224,7 @@ export default function CakeInteraction() {
                 setCandlesLit([true, true, true, true, true]);
                 setAllBlown(false);
               }}
-              className="mt-4 sm:mt-6 py-3 px-8 rounded-full border border-white/30 text-white/70 hover:text-white hover:border-white text-xs sm:text-sm tracking-widest uppercase transition-all cursor-pointer touch-manipulation shadow-lg z-30 pointer-events-auto select-none"
+              className="mt-4 sm:mt-6 py-3 px-8 rounded-full border border-[#F43F5E]/30 text-[#3A2A33]/70 hover:text-[#F43F5E] hover:border-[#F43F5E] text-xs sm:text-sm tracking-widest uppercase transition-all cursor-pointer touch-manipulation shadow-lg z-30 pointer-events-auto select-none"
             >
               {BIRTHDAY_CONFIG.cakeSection.reLightButtonText}
             </button>

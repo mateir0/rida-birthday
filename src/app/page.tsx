@@ -13,12 +13,12 @@ const MusicPlayer = dynamic(() => import('@/components/MusicPlayer'), { ssr: fal
 gsap.registerPlugin(ScrollTrigger);
 
 /* ─── Reusable Split Helpers (Direct color & neon shadow for 100% visibility & exact mobile sizing) ─── */
-const splitChars = (text: string, colorClass = 'text-[#FFE5B4]') =>
+const splitChars = (text: string, colorClass = 'text-[#F43F5E]') =>
   text.split('').map((c, i) => (
     <span
       key={i}
       className={`inline-block font-black ${colorClass}`}
-      style={{ textShadow: '0 0 20px rgba(255,229,180,0.35)' }}
+      style={{ textShadow: '0 0 20px rgba(251,113,133,0.35)' }}
     >
       {c === ' ' ? '\u00A0' : c}
     </span>
@@ -30,7 +30,7 @@ const splitWords = (text: string) =>
   ));
 
 /* Finale letters get staggered CSS animation delays + neon glow */
-const finaleChars = (text: string, colorClass = 'text-[#FFD700]', glowColor = 'rgba(255,215,0,0.4)') =>
+const finaleChars = (text: string, colorClass = 'text-[#F43F5E]', glowColor = 'rgba(244,63,94,0.4)') =>
   text.split('').map((c, i) => (
     <span
       key={i}
@@ -148,31 +148,31 @@ export default function Home() {
   /* ─── ENTRANCE GATE (Exact mobile text sizing & touch friendly) ─── */
   if (!entered) {
     return (
-      <div className="w-full min-h-screen bg-[#060816] flex flex-col items-center justify-center gap-6 sm:gap-8 text-white overflow-hidden px-4 py-12">
+      <div className="w-full min-h-screen bg-[#FFE3EC] flex flex-col items-center justify-center gap-6 sm:gap-8 text-[#3A2A33] overflow-hidden px-4 py-12">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="stars-layer"></div>
           <div className="stars-layer-2"></div>
         </div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(248,200,220,0.12)_0%,_transparent_70%)] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(244,63,94,0.12)_0%,_transparent_70%)] pointer-events-none"></div>
         
         <div className="z-10 text-center space-y-5 sm:space-y-6 max-w-xl mx-auto w-full">
-          <div className="inline-block px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full border border-[#FFD700]/40 bg-[#FFD700]/10 text-[#FFD700] text-[11px] sm:text-sm font-bold tracking-[0.25em] sm:tracking-[0.3em] uppercase animate-bounce">
+          <div className="inline-block px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full border border-[#F43F5E]/40 bg-[#F43F5E]/10 text-[#F43F5E] text-[11px] sm:text-sm font-bold tracking-[0.25em] sm:tracking-[0.3em] uppercase animate-bounce">
             {BIRTHDAY_CONFIG.entrance.badgeText}
           </div>
-          <h1 className="text-3xl sm:text-5xl md:text-7xl font-black leading-tight tracking-tight px-2" style={{ background: 'linear-gradient(135deg, #FFD700, #FFF8E1, #F8C8DC, #E6E6FA)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', filter: 'drop-shadow(0 0 30px rgba(255,215,0,0.3))' }}>
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-black leading-tight tracking-tight px-2" style={{ background: 'linear-gradient(135deg, #F43F5E, #FB7185, #F9A8C9, #FBCFE8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', filter: 'drop-shadow(0 0 30px rgba(244,63,94,0.3))' }}>
             {BIRTHDAY_CONFIG.entrance.title}
           </h1>
-          <p className="text-white/75 text-sm sm:text-lg max-w-md mx-auto leading-relaxed px-4">
+          <p className="text-[#3A2A33]/75 text-sm sm:text-lg max-w-md mx-auto leading-relaxed px-4">
             {BIRTHDAY_CONFIG.entrance.subtitle}
           </p>
           <button
             type="button"
             onClick={() => setEntered(true)}
             onTouchEnd={(e) => { e.preventDefault(); setEntered(true); }}
-            className="mt-4 sm:mt-6 group relative px-8 sm:px-14 py-4 sm:py-6 rounded-full overflow-hidden cursor-pointer touch-manipulation active:scale-95 transition-all duration-300 shadow-[0_0_30px_rgba(248,200,220,0.3)] hover:shadow-[0_0_50px_rgba(255,215,0,0.5)] z-30 pointer-events-auto select-none"
+            className="mt-4 sm:mt-6 group relative px-8 sm:px-14 py-4 sm:py-6 rounded-full overflow-hidden cursor-pointer touch-manipulation active:scale-95 transition-all duration-300 shadow-[0_0_30px_rgba(244,63,94,0.3)] hover:shadow-[0_0_50px_rgba(244,63,94,0.5)] z-30 pointer-events-auto select-none"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-[#F8C8DC] via-[#FFD700] to-[#E6E6FA] opacity-85 group-hover:opacity-100 transition-opacity duration-500 rounded-full pointer-events-none"></div>
-            <span className="relative text-sm sm:text-lg font-black tracking-widest uppercase text-[#060816] pointer-events-none">
+            <div className="absolute inset-0 bg-gradient-to-r from-[#FB7185] via-[#F43F5E] to-[#E64980] opacity-85 group-hover:opacity-100 transition-opacity duration-500 rounded-full pointer-events-none"></div>
+            <span className="relative text-sm sm:text-lg font-black tracking-widest uppercase text-white pointer-events-none">
               {BIRTHDAY_CONFIG.entrance.buttonText}
             </span>
           </button>
@@ -182,7 +182,7 @@ export default function Home() {
   }
 
   return (
-    <div ref={containerRef} className="w-full bg-[#060816] text-white overflow-hidden overflow-x-hidden">
+    <div ref={containerRef} className="w-full bg-[#FFE3EC] text-[#3A2A33] overflow-hidden overflow-x-hidden">
       {/* Background music — starts on the entrance-gate tap (user gesture) */}
       <MusicPlayer
         autoStart={entered}
@@ -200,28 +200,28 @@ export default function Home() {
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="stars-layer"></div><div className="stars-layer-2"></div>
         </div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(248,200,220,0.15)_0%,_transparent_60%)] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(244,63,94,0.15)_0%,_transparent_60%)] pointer-events-none"></div>
         
         <div className="z-10 text-center space-y-5 sm:space-y-6 max-w-5xl w-full">
           <div className="hero-line-1 flex flex-wrap items-center justify-center gap-2">
-            <span className="px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full border border-[#FFD700]/50 bg-[#FFD700]/15 text-[#FFD700] text-[11px] sm:text-sm font-black tracking-[0.25em] sm:tracking-[0.3em] uppercase">
+            <span className="px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full border border-[#F43F5E]/50 bg-[#F43F5E]/15 text-[#F43F5E] text-[11px] sm:text-sm font-black tracking-[0.25em] sm:tracking-[0.3em] uppercase">
               {BIRTHDAY_CONFIG.hero.badgeText}
             </span>
           </div>
 
           <h1 className="hero-line-2 text-4xl sm:text-7xl md:text-8xl lg:text-9xl font-black leading-tight tracking-tight flex flex-wrap justify-center items-center gap-0.5 sm:gap-2">
-            {splitChars(BIRTHDAY_CONFIG.hero.title, "text-[#FFD700]")}
+            {splitChars(BIRTHDAY_CONFIG.hero.title, "text-[#F43F5E]")}
           </h1>
 
-          <p className="hero-tagline text-sm sm:text-xl md:text-2xl text-white/80 font-light max-w-2xl mx-auto leading-relaxed px-2 sm:px-0">
-            {BIRTHDAY_CONFIG.hero.taglineBefore} <span className="text-[#FFD700] font-bold">{BIRTHDAY_CONFIG.hero.highlightText}</span> {BIRTHDAY_CONFIG.hero.taglineAfter}
+          <p className="hero-tagline text-sm sm:text-xl md:text-2xl text-[#3A2A33]/80 font-light max-w-2xl mx-auto leading-relaxed px-2 sm:px-0">
+            {BIRTHDAY_CONFIG.hero.taglineBefore} <span className="text-[#F43F5E] font-bold">{BIRTHDAY_CONFIG.hero.highlightText}</span> {BIRTHDAY_CONFIG.hero.taglineAfter}
           </p>
 
         </div>
 
         <div className="hero-scroll-hint absolute bottom-4 sm:bottom-6 z-10 flex flex-col items-center gap-1.5 sm:gap-2">
-          <p className="text-[10px] sm:text-xs text-white/40 tracking-[0.3em] uppercase font-semibold">{BIRTHDAY_CONFIG.hero.scrollHint}</p>
-          <div className="w-4 sm:w-5 h-7 sm:h-8 border border-white/30 rounded-full flex justify-center pt-1"><div className="w-1 sm:w-1.5 h-2 bg-[#FFD700] rounded-full animate-bounce"></div></div>
+          <p className="text-[10px] sm:text-xs text-[#7A656E] tracking-[0.3em] uppercase font-semibold">{BIRTHDAY_CONFIG.hero.scrollHint}</p>
+          <div className="w-4 sm:w-5 h-7 sm:h-8 border border-[#F43F5E]/30 rounded-full flex justify-center pt-1"><div className="w-1 sm:w-1.5 h-2 bg-[#F43F5E] rounded-full animate-bounce"></div></div>
         </div>
       </section>
 
@@ -229,19 +229,19 @@ export default function Home() {
       {/* CHAPTER 1: WHERE IT ALL BEGAN                       */}
       {/* ═══════════════════════════════════════════════════ */}
       <section className="relative w-full min-h-screen flex items-center py-16 sm:py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(230,230,250,0.06)_0%,_transparent_60%)] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(244,63,94,0.06)_0%,_transparent_60%)] pointer-events-none"></div>
         <div className="max-w-3xl mx-auto w-full px-4 sm:px-8 z-10 text-center">
           <div className="section-reveal space-y-4 sm:space-y-6">
             <div className="flex items-center justify-center gap-3">
-              <div className="h-px w-10 sm:w-12 bg-gradient-to-r from-transparent to-[#F8C8DC]"></div>
-              <p className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.35em] text-[#F8C8DC]">{BIRTHDAY_CONFIG.chapters[0]?.badge}</p>
+              <div className="h-px w-10 sm:w-12 bg-gradient-to-r from-transparent to-[#F9A8C9]"></div>
+              <p className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.35em] text-[#F9A8C9]">{BIRTHDAY_CONFIG.chapters[0]?.badge}</p>
             </div>
             <h2 className="stagger-group text-2xl sm:text-5xl md:text-6xl font-bold leading-tight">
               {splitWords(BIRTHDAY_CONFIG.chapters[0]?.title || "")}
             </h2>
             <div className="glass-card p-5 sm:p-8 rounded-2xl space-y-3 sm:space-y-4">
               {BIRTHDAY_CONFIG.chapters[0]?.paragraphs.map((para, i) => (
-                <p key={i} className="text-reveal text-sm sm:text-lg text-white/85 leading-relaxed">
+                <p key={i} className="text-reveal text-sm sm:text-lg text-[#3A2A33]/85 leading-relaxed">
                   {para}
                 </p>
               ))}
@@ -254,18 +254,18 @@ export default function Home() {
       {/* CHAPTER 2: FRIENDSHIP CARDS (Touch Responsive)      */}
       {/* ═══════════════════════════════════════════════════ */}
       <section className="relative w-full py-20 sm:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,215,0,0.05)_0%,_transparent_60%)] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(244,63,94,0.05)_0%,_transparent_60%)] pointer-events-none"></div>
         <div className="max-w-6xl mx-auto px-4 sm:px-8 z-10 relative">
           <div className="section-reveal text-center mb-10 sm:mb-16 space-y-3 sm:space-y-4">
             <div className="flex items-center justify-center gap-3">
-              <div className="h-px w-10 sm:w-12 bg-gradient-to-r from-transparent to-[#FFD700]"></div>
-              <p className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.35em] text-[#FFD700]">{BIRTHDAY_CONFIG.friendshipCardsSection.badge}</p>
-              <div className="h-px w-10 sm:w-12 bg-gradient-to-l from-transparent to-[#FFD700]"></div>
+              <div className="h-px w-10 sm:w-12 bg-gradient-to-r from-transparent to-[#F43F5E]"></div>
+              <p className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.35em] text-[#F43F5E]">{BIRTHDAY_CONFIG.friendshipCardsSection.badge}</p>
+              <div className="h-px w-10 sm:w-12 bg-gradient-to-l from-transparent to-[#F43F5E]"></div>
             </div>
             <h2 className="stagger-group text-2xl sm:text-5xl md:text-6xl font-bold">
               {splitWords(BIRTHDAY_CONFIG.friendshipCardsSection.title)}
             </h2>
-            <p className="text-reveal text-white/75 text-sm sm:text-lg max-w-lg mx-auto">
+            <p className="text-reveal text-[#3A2A33]/75 text-sm sm:text-lg max-w-lg mx-auto">
               {BIRTHDAY_CONFIG.friendshipCardsSection.subtitle}
             </p>
           </div>
@@ -282,19 +282,19 @@ export default function Home() {
       {/* CHAPTER 3: MOTIVATION & SUPPORT                     */}
       {/* ═══════════════════════════════════════════════════ */}
       <section className="relative w-full min-h-screen flex items-center py-16 sm:py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,229,180,0.06)_0%,_transparent_60%)] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(251,113,133,0.06)_0%,_transparent_60%)] pointer-events-none"></div>
         <div className="max-w-3xl mx-auto w-full px-4 sm:px-8 z-10 text-center">
           <div className="section-reveal space-y-4 sm:space-y-6">
             <div className="flex items-center justify-center gap-3">
-              <div className="h-px w-10 sm:w-12 bg-gradient-to-r from-transparent to-[#FFE5B4]"></div>
-              <p className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.35em] text-[#FFE5B4]">{BIRTHDAY_CONFIG.chapters[1]?.badge}</p>
+              <div className="h-px w-10 sm:w-12 bg-gradient-to-r from-transparent to-[#FB7185]"></div>
+              <p className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.35em] text-[#FB7185]">{BIRTHDAY_CONFIG.chapters[1]?.badge}</p>
             </div>
             <h2 className="stagger-group text-2xl sm:text-5xl md:text-6xl font-bold leading-tight">
               {splitWords(BIRTHDAY_CONFIG.chapters[1]?.title || "")}
             </h2>
             <div className="glass-card p-5 sm:p-8 rounded-2xl space-y-3 sm:space-y-4">
               {BIRTHDAY_CONFIG.chapters[1]?.paragraphs.map((para, i) => (
-                <p key={i} className="text-reveal text-sm sm:text-lg text-white/85 leading-relaxed">
+                <p key={i} className="text-reveal text-sm sm:text-lg text-[#3A2A33]/85 leading-relaxed">
                   {para}
                 </p>
               ))}
@@ -307,26 +307,26 @@ export default function Home() {
       {/* CHAPTER 4: EMOTIONAL QUOTES                         */}
       {/* ═══════════════════════════════════════════════════ */}
       <section className="relative w-full py-20 sm:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(248,200,220,0.08)_0%,_transparent_50%)] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(244,63,94,0.08)_0%,_transparent_50%)] pointer-events-none"></div>
         <div className="z-10 max-w-4xl mx-auto px-4 sm:px-8 space-y-12 sm:space-y-24 text-center relative">
           <div className="text-reveal">
-            <blockquote className="text-lg sm:text-4xl md:text-5xl font-light text-white leading-snug italic" style={{ textShadow: '0 0 40px rgba(248,200,220,0.3)' }}>
+            <blockquote className="text-lg sm:text-4xl md:text-5xl font-light text-[#3A2A33] leading-snug italic" style={{ textShadow: '0 0 40px rgba(244,63,94,0.3)' }}>
               "{BIRTHDAY_CONFIG.quotesSection.quote1}"
             </blockquote>
           </div>
           <div className="text-reveal flex justify-center">
-            <div className="h-px w-16 sm:w-24 bg-gradient-to-r from-transparent via-[#FFD700]/60 to-transparent"></div>
+            <div className="h-px w-16 sm:w-24 bg-gradient-to-r from-transparent via-[#F43F5E]/60 to-transparent"></div>
           </div>
           <div className="text-reveal">
-            <blockquote className="text-base sm:text-3xl md:text-4xl font-light text-[#E6E6FA] leading-snug">
+            <blockquote className="text-base sm:text-3xl md:text-4xl font-light text-[#F43F5E] leading-snug">
               {BIRTHDAY_CONFIG.quotesSection.quote2}
             </blockquote>
           </div>
           <div className="text-reveal flex justify-center">
-            <div className="h-px w-16 sm:w-24 bg-gradient-to-r from-transparent via-[#F8C8DC]/60 to-transparent"></div>
+            <div className="h-px w-16 sm:w-24 bg-gradient-to-r from-transparent via-[#F9A8C9]/60 to-transparent"></div>
           </div>
           <div className="text-reveal">
-            <blockquote className="text-base sm:text-3xl md:text-4xl font-light text-[#FFE5B4] leading-snug">
+            <blockquote className="text-base sm:text-3xl md:text-4xl font-light text-[#3A2A33] leading-snug">
               {BIRTHDAY_CONFIG.quotesSection.quote3}
             </blockquote>
           </div>
@@ -337,19 +337,19 @@ export default function Home() {
       {/* CHAPTER 5: FRIENDSHIP CONSTELLATION                 */}
       {/* ═══════════════════════════════════════════════════ */}
       <section className="relative w-full min-h-screen flex items-center py-16 sm:py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(230,230,250,0.06)_0%,_transparent_50%)] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(244,63,94,0.06)_0%,_transparent_50%)] pointer-events-none"></div>
         <div className="max-w-3xl mx-auto w-full px-4 sm:px-8 z-10 text-center">
           <div className="section-reveal space-y-4 sm:space-y-6">
             <div className="flex items-center justify-center gap-3">
-              <div className="h-px w-10 sm:w-12 bg-gradient-to-r from-transparent to-[#E6E6FA]"></div>
-              <p className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.35em] text-[#E6E6FA]">{BIRTHDAY_CONFIG.chapters[2]?.badge}</p>
+              <div className="h-px w-10 sm:w-12 bg-gradient-to-r from-transparent to-[#FBCFE8]"></div>
+              <p className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.35em] text-[#FBCFE8]">{BIRTHDAY_CONFIG.chapters[2]?.badge}</p>
             </div>
             <h2 className="stagger-group text-2xl sm:text-5xl md:text-6xl font-bold leading-tight">
               {splitWords(BIRTHDAY_CONFIG.chapters[2]?.title || "")}
             </h2>
             <div className="glass-card p-5 sm:p-8 rounded-2xl space-y-3 sm:space-y-4">
               {BIRTHDAY_CONFIG.chapters[2]?.paragraphs.map((para, i) => (
-                <p key={i} className="text-reveal text-sm sm:text-lg text-white/85 leading-relaxed">
+                <p key={i} className="text-reveal text-sm sm:text-lg text-[#3A2A33]/85 leading-relaxed">
                   {para}
                 </p>
               ))}
@@ -362,19 +362,19 @@ export default function Home() {
       {/* CHAPTER 6: PUPPY LOVE 🐾                           */}
       {/* ═══════════════════════════════════════════════════ */}
       <section className="relative w-full min-h-screen flex items-center py-16 sm:py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(255,229,180,0.06)_0%,_transparent_60%)] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(251,113,133,0.06)_0%,_transparent_60%)] pointer-events-none"></div>
         <div className="max-w-3xl mx-auto w-full px-4 sm:px-8 z-10 text-center">
           <div className="section-reveal space-y-4 sm:space-y-6">
             <div className="flex items-center justify-center gap-3">
-              <div className="h-px w-10 sm:w-12 bg-gradient-to-r from-transparent to-[#FFE5B4]"></div>
-              <p className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.35em] text-[#FFE5B4]">{BIRTHDAY_CONFIG.chapters[3]?.badge}</p>
+              <div className="h-px w-10 sm:w-12 bg-gradient-to-r from-transparent to-[#FB7185]"></div>
+              <p className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.35em] text-[#FB7185]">{BIRTHDAY_CONFIG.chapters[3]?.badge}</p>
             </div>
             <h2 className="stagger-group text-2xl sm:text-5xl md:text-6xl font-bold leading-tight">
               {splitWords(BIRTHDAY_CONFIG.chapters[3]?.title || "")}
             </h2>
             <div className="glass-card p-5 sm:p-8 rounded-2xl space-y-3 sm:space-y-4">
               {BIRTHDAY_CONFIG.chapters[3]?.paragraphs.map((para, i) => (
-                <p key={i} className="text-reveal text-sm sm:text-lg text-white/85 leading-relaxed">
+                <p key={i} className="text-reveal text-sm sm:text-lg text-[#3A2A33]/85 leading-relaxed">
                   {para}
                 </p>
               ))}
@@ -387,19 +387,19 @@ export default function Home() {
       {/* CHAPTER 7: MEMORY BOOK                              */}
       {/* ═══════════════════════════════════════════════════ */}
       <section className="relative w-full min-h-screen flex items-center py-16 sm:py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,215,0,0.05)_0%,_transparent_60%)] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(244,63,94,0.05)_0%,_transparent_60%)] pointer-events-none"></div>
         <div className="max-w-3xl mx-auto w-full px-4 sm:px-8 z-10 text-center">
           <div className="section-reveal space-y-4 sm:space-y-6">
             <div className="flex items-center justify-center gap-3">
-              <div className="h-px w-10 sm:w-12 bg-gradient-to-r from-transparent to-[#FFD700]"></div>
-              <p className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.35em] text-[#FFD700]">{BIRTHDAY_CONFIG.chapters[4]?.badge}</p>
+              <div className="h-px w-10 sm:w-12 bg-gradient-to-r from-transparent to-[#F43F5E]"></div>
+              <p className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.35em] text-[#F43F5E]">{BIRTHDAY_CONFIG.chapters[4]?.badge}</p>
             </div>
             <h2 className="stagger-group text-2xl sm:text-5xl md:text-6xl font-bold leading-tight">
               {splitWords(BIRTHDAY_CONFIG.chapters[4]?.title || "")}
             </h2>
             <div className="glass-card p-5 sm:p-8 rounded-2xl space-y-3 sm:space-y-4">
               {BIRTHDAY_CONFIG.chapters[4]?.paragraphs.map((para, i) => (
-                <p key={i} className="text-reveal text-sm sm:text-lg text-white/85 leading-relaxed">
+                <p key={i} className="text-reveal text-sm sm:text-lg text-[#3A2A33]/85 leading-relaxed">
                   {para}
                 </p>
               ))}
@@ -412,19 +412,19 @@ export default function Home() {
       {/* CHAPTER 8: TREE OF LIFE                             */}
       {/* ═══════════════════════════════════════════════════ */}
       <section className="relative w-full min-h-screen flex items-center py-16 sm:py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(230,230,250,0.06)_0%,_transparent_60%)] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(244,63,94,0.06)_0%,_transparent_60%)] pointer-events-none"></div>
         <div className="max-w-3xl mx-auto w-full px-4 sm:px-8 z-10 text-center">
           <div className="section-reveal space-y-4 sm:space-y-6">
             <div className="flex items-center justify-center gap-3">
-              <div className="h-px w-10 sm:w-12 bg-gradient-to-r from-transparent to-[#E6E6FA]"></div>
-              <p className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.35em] text-[#E6E6FA]">{BIRTHDAY_CONFIG.chapters[5]?.badge}</p>
+              <div className="h-px w-10 sm:w-12 bg-gradient-to-r from-transparent to-[#FBCFE8]"></div>
+              <p className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.35em] text-[#FBCFE8]">{BIRTHDAY_CONFIG.chapters[5]?.badge}</p>
             </div>
             <h2 className="stagger-group text-2xl sm:text-5xl md:text-6xl font-bold leading-tight">
               {splitWords(BIRTHDAY_CONFIG.chapters[5]?.title || "")}
             </h2>
             <div className="glass-card p-5 sm:p-8 rounded-2xl space-y-3 sm:space-y-4">
               {BIRTHDAY_CONFIG.chapters[5]?.paragraphs.map((para, i) => (
-                <p key={i} className="text-reveal text-sm sm:text-lg text-white/85 leading-relaxed">
+                <p key={i} className="text-reveal text-sm sm:text-lg text-[#3A2A33]/85 leading-relaxed">
                   {para}
                 </p>
               ))}
@@ -437,18 +437,18 @@ export default function Home() {
       {/* CHAPTER 9: INTERACTIVE BIRTHDAY CAKE 🎂              */}
       {/* ═══════════════════════════════════════════════════ */}
       <section className="relative w-full min-h-screen flex flex-col items-center justify-center py-16 sm:py-20 overflow-hidden px-4 sm:px-8">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(248,200,220,0.12)_0%,_transparent_60%)] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(244,63,94,0.12)_0%,_transparent_60%)] pointer-events-none"></div>
         <div className="z-10 w-full max-w-4xl mx-auto space-y-6 sm:space-y-8">
           <div className="text-center section-reveal space-y-3 sm:space-y-4">
             <div className="flex items-center justify-center gap-3">
-              <div className="h-px w-10 sm:w-12 bg-gradient-to-r from-transparent to-[#F8C8DC]"></div>
-              <p className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.35em] text-[#F8C8DC]">{BIRTHDAY_CONFIG.cakeSection.badge}</p>
-              <div className="h-px w-10 sm:w-12 bg-gradient-to-l from-transparent to-[#F8C8DC]"></div>
+              <div className="h-px w-10 sm:w-12 bg-gradient-to-r from-transparent to-[#F9A8C9]"></div>
+              <p className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.35em] text-[#F9A8C9]">{BIRTHDAY_CONFIG.cakeSection.badge}</p>
+              <div className="h-px w-10 sm:w-12 bg-gradient-to-l from-transparent to-[#F9A8C9]"></div>
             </div>
             <h2 className="stagger-group text-2xl sm:text-5xl md:text-6xl font-bold">
               {splitWords(BIRTHDAY_CONFIG.cakeSection.title)}
             </h2>
-            <p className="text-xs sm:text-base text-white/70 max-w-md mx-auto">
+            <p className="text-xs sm:text-base text-[#3A2A33]/70 max-w-md mx-auto">
               {BIRTHDAY_CONFIG.cakeSection.subtitle}
             </p>
           </div>
@@ -461,12 +461,12 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════ */}
       <section className="relative w-full min-h-screen flex items-center justify-center py-20 sm:py-24 overflow-hidden px-4 sm:px-8">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-t from-[#060816] via-transparent to-[#060816]"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-[#060816]/80 via-transparent to-[#060816]/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#FFE3EC] via-transparent to-[#FFE3EC]"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#FFE3EC]/80 via-transparent to-[#FFE3EC]/80"></div>
         </div>
         <div className="z-10 text-center space-y-8 max-w-4xl">
           <div className="section-reveal space-y-4 sm:space-y-6">
-            <p className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.35em] text-[#FFD700]">{BIRTHDAY_CONFIG.lanternsSection.badge}</p>
+            <p className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.35em] text-[#F43F5E]">{BIRTHDAY_CONFIG.lanternsSection.badge}</p>
             <h2 className="stagger-group text-xl sm:text-4xl md:text-5xl font-light leading-relaxed px-2">
               {splitWords(BIRTHDAY_CONFIG.lanternsSection.title)}
             </h2>
@@ -479,53 +479,53 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════ */}
       <section className="finale-section relative w-full min-h-[120vh] flex items-center justify-center py-24 sm:py-28 overflow-hidden px-4 sm:px-8">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute inset-0 bg-gradient-to-t from-[#060816] via-[#060816]/40 to-[#060816]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,215,0,0.1)_0%,_transparent_65%)]"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#FFE3EC] via-[#FFE3EC]/40 to-[#FFE3EC]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(244,63,94,0.1)_0%,_transparent_65%)]"></div>
         </div>
 
         <div className="z-10 text-center space-y-8 sm:space-y-10 max-w-5xl w-full">
           {/* Main Birthday Text - Animated letter by letter with exact mobile text sizes */}
           <div className="space-y-3 sm:space-y-4">
-            <div className="inline-block px-4 sm:px-5 py-1.5 sm:py-2 rounded-full border border-[#FFD700] bg-[#FFD700]/15 mb-2">
-              <p className="text-[10px] sm:text-sm uppercase tracking-[0.4em] sm:tracking-[0.5em] text-[#FFD700] font-black">
+            <div className="inline-block px-4 sm:px-5 py-1.5 sm:py-2 rounded-full border border-[#F43F5E] bg-[#F43F5E]/15 mb-2">
+              <p className="text-[10px] sm:text-sm uppercase tracking-[0.4em] sm:tracking-[0.5em] text-[#F43F5E] font-black">
                 {BIRTHDAY_CONFIG.finaleSection.badge}
               </p>
             </div>
 
             <h1 className="text-3xl sm:text-7xl md:text-8xl lg:text-9xl font-black leading-tight tracking-tight flex flex-wrap justify-center items-center gap-0.5 sm:gap-2">
-              {finaleChars(BIRTHDAY_CONFIG.finaleSection.titleLine1, "text-[#FFD700]", "rgba(255,215,0,0.5)")}
+              {finaleChars(BIRTHDAY_CONFIG.finaleSection.titleLine1, "text-[#F43F5E]", "rgba(244,63,94,0.5)")}
             </h1>
 
             <h2 className="text-2xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight flex flex-wrap justify-center items-center gap-0.5 sm:gap-2">
-              {finaleChars(BIRTHDAY_CONFIG.finaleSection.titleLine2, "text-[#F8C8DC]", "rgba(248,200,220,0.4)")}
+              {finaleChars(BIRTHDAY_CONFIG.finaleSection.titleLine2, "text-[#F43F5E]", "rgba(244,63,94,0.4)")}
             </h2>
           </div>
 
           {/* Bridge text */}
           <div className="text-reveal py-3 sm:py-4">
             <div className="flex items-center justify-center gap-3 sm:gap-6">
-              <div className="h-px w-10 sm:w-24 bg-gradient-to-r from-transparent to-[#FFD700]/70"></div>
-              <p className="text-lg sm:text-3xl font-bold text-white tracking-[0.25em] sm:tracking-[0.3em] uppercase italic">{BIRTHDAY_CONFIG.finaleSection.bridgeText}</p>
-              <div className="h-px w-10 sm:w-24 bg-gradient-to-l from-transparent to-[#FFD700]/70"></div>
+              <div className="h-px w-10 sm:w-24 bg-gradient-to-r from-transparent to-[#F43F5E]/70"></div>
+              <p className="text-lg sm:text-3xl font-bold text-[#3A2A33] tracking-[0.25em] sm:tracking-[0.3em] uppercase italic">{BIRTHDAY_CONFIG.finaleSection.bridgeText}</p>
+              <div className="h-px w-10 sm:w-24 bg-gradient-to-l from-transparent to-[#F43F5E]/70"></div>
             </div>
           </div>
 
           {/* Big cinematic name */}
           <h2 className="text-4xl sm:text-7xl md:text-8xl lg:text-9xl font-black leading-tight tracking-tight flex flex-wrap justify-center items-center gap-0.5 sm:gap-2">
-            {finaleChars(BIRTHDAY_CONFIG.finaleSection.nameText, "text-[#E6E6FA]", "rgba(230,230,250,0.5)")}
+            {finaleChars(BIRTHDAY_CONFIG.finaleSection.nameText, "text-[#3A2A33]", "rgba(244,63,94,0.5)")}
           </h2>
 
           {/* Sparkle Divider */}
           <div className="text-reveal flex items-center justify-center gap-3 py-4 sm:py-6">
-            <div className="h-px w-12 sm:w-24 bg-gradient-to-r from-transparent to-white/30"></div>
+            <div className="h-px w-12 sm:w-24 bg-gradient-to-r from-transparent to-[#F43F5E]/30"></div>
             <span className="text-xl sm:text-3xl animate-bounce">✨👑✨</span>
-            <div className="h-px w-12 sm:w-24 bg-gradient-to-l from-transparent to-white/30"></div>
+            <div className="h-px w-12 sm:w-24 bg-gradient-to-l from-transparent to-[#F43F5E]/30"></div>
           </div>
 
           {/* Wishes */}
           <div className="text-reveal max-w-2xl mx-auto space-y-4 sm:space-y-6 pt-2 px-2">
             {BIRTHDAY_CONFIG.finaleSection.wishesParagraphs.map((para, i) => (
-              <p key={i} className={`leading-relaxed ${i === 0 ? 'text-sm sm:text-2xl text-white font-light' : i === 1 ? 'text-sm sm:text-2xl text-white/90 font-light italic' : 'text-xs sm:text-xl text-[#FFD700] font-semibold'}`}>
+              <p key={i} className={`leading-relaxed ${i === 0 ? 'text-sm sm:text-2xl text-[#3A2A33] font-light' : i === 1 ? 'text-sm sm:text-2xl text-[#3A2A33]/90 font-light italic' : 'text-xs sm:text-xl text-[#F43F5E] font-semibold'}`}>
                 {para}
               </p>
             ))}
@@ -534,22 +534,22 @@ export default function Home() {
           {/* Sign-off format */}
           <div className="text-reveal pt-10 sm:pt-16 space-y-6 sm:space-y-8">
             <div className="relative inline-block w-full max-w-md mx-auto">
-              <div className="absolute -inset-3 bg-gradient-to-r from-[#F8C8DC]/20 via-[#FFD700]/25 to-[#E6E6FA]/20 rounded-3xl blur-xl animate-pulse-slow"></div>
-              <div className="relative glass-card px-5 sm:px-12 py-6 sm:py-10 rounded-2xl text-center space-y-3 sm:space-y-4 border-2 border-[#FFD700]/50 shadow-[0_0_40px_rgba(255,215,0,0.25)]">
-                <p className="text-[10px] sm:text-sm text-white/60 uppercase tracking-[0.3em] sm:tracking-[0.4em] font-bold">{BIRTHDAY_CONFIG.finaleSection.signOffPreText}</p>
-                <div className="h-px w-16 sm:w-20 mx-auto bg-gradient-to-r from-transparent via-[#FFD700] to-transparent"></div>
+              <div className="absolute -inset-3 bg-gradient-to-r from-[#F9A8C9]/20 via-[#F43F5E]/25 to-[#FBCFE8]/20 rounded-3xl blur-xl animate-pulse-slow"></div>
+              <div className="relative glass-card px-5 sm:px-12 py-6 sm:py-10 rounded-2xl text-center space-y-3 sm:space-y-4 border-2 border-[#F43F5E]/50 shadow-[0_0_40px_rgba(244,63,94,0.25)]">
+                <p className="text-[10px] sm:text-sm text-[#3A2A33]/60 uppercase tracking-[0.3em] sm:tracking-[0.4em] font-bold">{BIRTHDAY_CONFIG.finaleSection.signOffPreText}</p>
+                <div className="h-px w-16 sm:w-20 mx-auto bg-gradient-to-r from-transparent via-[#F43F5E] to-transparent"></div>
                 
-                <p className="text-lg sm:text-3xl font-extrabold text-[#FFF8E1] tracking-wider uppercase">
+                <p className="text-lg sm:text-3xl font-extrabold text-[#3A2A33] tracking-wider uppercase">
                   {BIRTHDAY_CONFIG.finaleSection.signOffRelationship}
                 </p>
                 
-                <p className="text-4xl sm:text-6xl font-black tracking-wider text-[#FFD700] drop-shadow-[0_0_25px_rgba(255,215,0,0.6)] animate-bounce">
+                <p className="text-4xl sm:text-6xl font-black tracking-wider text-[#F43F5E] drop-shadow-[0_0_25px_rgba(244,63,94,0.6)] animate-bounce">
                   {BIRTHDAY_CONFIG.finaleSection.signOffName}
                 </p>
               </div>
             </div>
 
-            <p className="text-[10px] sm:text-xs text-white/30 tracking-widest uppercase pt-3 sm:pt-4 font-bold">
+            <p className="text-[10px] sm:text-xs text-[#7A656E] tracking-widest uppercase pt-3 sm:pt-4 font-bold">
               {BIRTHDAY_CONFIG.finaleSection.footerNote}
             </p>
           </div>
@@ -579,14 +579,14 @@ function FlipCard({ card, index }: { card: typeof BIRTHDAY_CONFIG.friendshipCard
         {/* Front */}
         <div className="absolute inset-0 p-5 sm:p-8 rounded-2xl flex flex-col items-center justify-center gap-3 sm:gap-4 text-center pointer-events-none" style={{ backfaceVisibility: 'hidden' }}>
           <span className="text-4xl sm:text-5xl animate-bounce pointer-events-none" style={{ animationDelay: `${index * 0.1}s` }}>{card.emoji}</span>
-          <h3 className="text-lg sm:text-2xl font-black text-white pointer-events-none">{card.title}</h3>
-          <span className="px-3 sm:px-4 py-1 rounded-full bg-white/10 border border-white/20 text-[10px] sm:text-xs text-[#FFD700] uppercase font-bold tracking-widest pointer-events-none">
+          <h3 className="text-lg sm:text-2xl font-black text-[#3A2A33] pointer-events-none">{card.title}</h3>
+          <span className="px-3 sm:px-4 py-1 rounded-full bg-[#F43F5E]/10 border border-[#F43F5E]/20 text-[10px] sm:text-xs text-[#F43F5E] uppercase font-bold tracking-widest pointer-events-none">
             Tap to read ✨
           </span>
         </div>
         {/* Back */}
-        <div className="absolute inset-0 p-5 sm:p-8 rounded-2xl flex items-center justify-center bg-[#060816]/95 border border-[#FFD700]/40 pointer-events-none" style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}>
-          <p className="text-xs sm:text-base text-white/90 leading-relaxed text-center font-medium pointer-events-none">{card.text}</p>
+        <div className="absolute inset-0 p-5 sm:p-8 rounded-2xl flex items-center justify-center bg-[#FFE3EC]/95 border border-[#F43F5E]/40 pointer-events-none" style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}>
+          <p className="text-xs sm:text-base text-[#3A2A33]/90 leading-relaxed text-center font-medium pointer-events-none">{card.text}</p>
         </div>
       </div>
     </div>
