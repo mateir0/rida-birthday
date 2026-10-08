@@ -46,7 +46,7 @@ export default function TreeSection() {
       <Float speed={2} rotationIntensity={0.2} floatIntensity={0.5}>
         <Image 
           ref={treeRef as any}
-          url="/assets/tree.png" 
+          url="./assets/tree.png" 
           transparent 
           scale={[0, 0]} 
           toneMapped={false}

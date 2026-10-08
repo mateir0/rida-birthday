@@ -36,7 +36,7 @@ export default function HeroIsland() {
       <Float speed={2} rotationIntensity={0.2} floatIntensity={0.5}>
         <Image 
           ref={imageRef as any}
-          url="/assets/island.png" 
+          url="./assets/island.png" 
           transparent 
           scale={[10, 10]} 
           toneMapped={false}

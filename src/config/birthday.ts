@@ -144,7 +144,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
     taglineAfter:
       "— the girl who stole my heart and makes every single day brighter. This is all for you.",
     scrollHint: "Scroll to explore",
-    heroImage: "/assets/hero.png",
+    heroImage: "./assets/hero.png",
   },
 
   // ─── 4. STORY CHAPTERS ───
@@ -157,7 +157,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
         `They say the best things come into your life when you least expect them. You didn't just walk into my life, ${NICKNAME} — you made it home.`,
         "Today we celebrate the day the universe decided I deserved someone as wonderful as you.",
       ],
-      image: "/assets/intro.png",
+      image: "./assets/intro.png",
       imageAlt: "A golden gift for Rida",
     },
     {
@@ -168,7 +168,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
         "Behind every dream I chase, there's you — believing in me even on the days I don't believe in myself.",
         "Your love is the reason I dare to fly higher. Everything good in me has your fingerprints on it.",
       ],
-      image: "/assets/wings.png",
+      image: "./assets/wings.png",
       imageAlt: "Golden wings",
     },
     {
@@ -179,7 +179,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
         "Out of billions of people in this world, my heart found you. If that's not destiny, I don't know what is.",
         `Like a constellation, every little thing about you — your laugh, your warmth, your spark — lights up my entire sky. Happy birthday, ${NICKNAME}.`,
       ],
-      image: "/assets/friendship.png",
+      image: "./assets/friendship.png",
       imageAlt: "Love constellation",
     },
     {
@@ -190,7 +190,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
         "Your laugh is my favorite sound. Your smile is my favorite sight.",
         "And you — you're my favorite everything. Today, the whole world gets to celebrate what I celebrate every day: you.",
       ],
-      image: "/assets/heart.png",
+      image: "./assets/heart.png",
       imageAlt: "Golden heart",
     },
     {
@@ -201,7 +201,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
         "Every love story is beautiful, but ours is my favorite — the late-night talks, the silly jokes, the way you just get me.",
         "And the best part? We're still writing it. The next chapters are going to be even better.",
       ],
-      image: "/assets/book.png",
+      image: "./assets/book.png",
       imageAlt: "Our storybook",
     },
     {
@@ -212,7 +212,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
         "Like the deepest roots, what I feel for you only grows stronger with time — through every season, every storm, every sunshine.",
         `Happy birthday, my love. Here's to us — today, tomorrow, always.`,
       ],
-      image: "/assets/tree.png",
+      image: "./assets/tree.png",
       imageAlt: "Tree of love",
     },
   ],
@@ -310,7 +310,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
 
   // ─── 10. BACKGROUND MUSIC ───
   audio: {
-    backgroundMusic: "/audio/birthday.mp3",
+    backgroundMusic: "./audio/birthday.mp3",
     volume: 0.6,
   },
 };

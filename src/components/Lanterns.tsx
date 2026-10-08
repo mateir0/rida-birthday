@@ -41,7 +41,7 @@ export default function Lanterns() {
       <Float speed={1} rotationIntensity={0.1} floatIntensity={1}>
         <Image 
           ref={lanternsRef as any}
-          url="/assets/lanterns.png" 
+          url="./assets/lanterns.png" 
           transparent 
           scale={[0, 0]} 
           toneMapped={false}

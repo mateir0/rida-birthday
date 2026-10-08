@@ -41,7 +41,7 @@ export default function MemoryBook() {
       <Float speed={2} rotationIntensity={0.2} floatIntensity={0.5}>
         <Image 
           ref={bookRef as any}
-          url="/assets/book.png" 
+          url="./assets/book.png" 
           transparent 
           scale={[0, 0]} 
           toneMapped={false}

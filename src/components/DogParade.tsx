@@ -42,7 +42,7 @@ export default function DogParade() {
       <Float speed={3} rotationIntensity={0.5} floatIntensity={1}>
         <Image 
           ref={dogRef as any}
-          url="/assets/puppies.png" 
+          url="./assets/puppies.png" 
           transparent 
           scale={[0, 0]} 
           toneMapped={false}

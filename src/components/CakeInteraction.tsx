@@ -155,7 +155,7 @@ export default function CakeInteraction() {
 
               {/* Cake Image */}
               <img
-                src="/assets/cake.png"
+                src="./assets/cake.png"
                 alt={`${BIRTHDAY_CONFIG.birthdayPerson.age}th Birthday Cake`}
                 className={`w-64 sm:w-80 md:w-[28rem] rounded-3xl shadow-2xl transition-all duration-1000 pointer-events-none ${allBlown ? 'shadow-[0_0_140px_rgba(255,215,0,0.7)] scale-105' : 'shadow-pink-900/40'}`}
               />

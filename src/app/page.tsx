@@ -503,7 +503,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════ */}
       <section className="relative w-full min-h-screen flex items-center justify-center py-20 sm:py-24 overflow-hidden px-4 sm:px-8">
         <div className="absolute inset-0">
-          <img src="/assets/lanterns.png" alt="Floating lanterns" className="parallax-float w-full h-full object-cover opacity-50" />
+          <img src="./assets/lanterns.png" alt="Floating lanterns" className="parallax-float w-full h-full object-cover opacity-50" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#060816] via-transparent to-[#060816]"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-[#060816]/80 via-transparent to-[#060816]/80"></div>
         </div>
@@ -522,7 +522,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════ */}
       <section className="finale-section relative w-full min-h-[120vh] flex items-center justify-center py-24 sm:py-28 overflow-hidden px-4 sm:px-8">
         <div className="absolute inset-0 pointer-events-none">
-          <img src="/assets/fireworks.png" alt="Fireworks" className="parallax-float w-full h-full object-cover opacity-50" />
+          <img src="./assets/fireworks.png" alt="Fireworks" className="parallax-float w-full h-full object-cover opacity-50" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#060816] via-[#060816]/40 to-[#060816]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,215,0,0.1)_0%,_transparent_65%)]"></div>
         </div>
