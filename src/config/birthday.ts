@@ -104,18 +104,18 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
   },
   entrance: {
     badgeText: "💗 MADE WITH LOVE, FOR YOU 💗",
-    title: `HAPPPPYYYY BIRTHDAY ${FRIEND_NAME.toUpperCase()}!! 💗`,
+    title: `IT'S YOUR DAY ${FRIEND_NAME.toUpperCase()}!! 💗`,
     subtitle:
-      "MY CUEST MUTEST PRETTIEST JANU MANU — I made you something special and I'm sending it to you this sham. Ready??",
+      "My janu manu — I stayed up making you something, and it's finally ready. This sham, this is all for you. Ready??",
     buttonText: "OPEN YOUR SPECIAL GIFT 🎁",
   },
   hero: {
-    badgeText: "💗 HAPPPPYYYY BIRTHDAY MY LOVE 💗",
+    badgeText: "💗 HAPPY BIRTHDAY MY LOVE 💗",
     title: `${FRIEND_NAME} ✨`,
     taglineBefore: "To",
     highlightText: `my ${NICKNAME}`,
     taglineAfter:
-      "— MY CUEST MUTEST PRETTIEST BEAUTIFUL AND SO SO SO CUTEEEEEEE JANU MANU. I LOVE YOU SO MUCHHHHHHH. This whole thing is for YOU.",
+      "— the cutest girl on the planet and the owner of my whole heart. I made this entire thing just for YOU.",
     scrollHint: "Scroll to explore",
     heroImage: "./assets/hero.png",
   },
@@ -123,10 +123,10 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
     {
       id: "chapter-1",
       badge: "Chapter One",
-      title: "THE DAY MY JANU MANU WAS BORN",
+      title: "TODAY IS ALL ABOUT YOU",
       paragraphs: [
-        "HAPPPPYYYY HAPPY BIRTHDAY TO MY CUEST MUTEST PRETTIEST BEAUTIFUL AND SO SO SO CUTEEEEEEE JANU MANU!! I LOVE YOU SO MUCHHHHHHHHHHH 💗💗",
-        "I wish I could send you gifts yar ☹️☹️ BUT ISSSOKKK — I prepared something for you instead, and you're looking at it RIGHT NOW. This whole little world is yours.",
+        "OKAY SO. Out of all 365 days, today is my favorite — because it's the day YOU showed up in this world. The universe really outdid itself with this one.",
+        "I couldn't wrap you a present yar, so I built you this instead ☹️💗. It's not much, but I made it with my own two hands and my whole heart.",
       ],
       image: "./assets/intro.png",
       imageAlt: "A golden gift for Rida",
@@ -134,10 +134,10 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
     {
       id: "chapter-3",
       badge: "Chapter Three",
-      title: "STOP TALKING BAD ABOUT YOURSELF",
+      title: "MY EYES WORK FINE, OKAY?",
       paragraphs: [
-        "RIDA YOU'RE LIKE THE BEST HUMAN BEING EVER AND I LOVE U SO MUCH. And I JS DON'T LIKE HOW U TALK BAD ABOUT YOURSELF.",
-        "Don't EVER EVER say you're not pretty or anything, okay?? YOU ARE LITR SO CUTE, SO PRETTY. My eyes work perfectly fine — trust me on this one.",
+        "Rida, you're genuinely the sweetest person I know, and it makes me SO happy just having you around.",
+        "But listen — no more of that 'I'm not pretty' nonsense, okay?? Have you SEEN you?? You're adorable and that's final. No appeals allowed.",
       ],
       image: "./assets/wings.png",
       imageAlt: "Golden wings",
@@ -145,10 +145,10 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
     {
       id: "chapter-4",
       badge: "Chapter Four",
-      title: "THE NO-STUDY CHALLENGE",
+      title: "BOOKS ARE BANNED TODAY",
       paragraphs: [
-        "OKAY GIRL LISTEN. AJ DON'T TOUCH YOUR BOOOKS. Don't sirf study today — it's YOUR b'day!! Go out with your family, eat good food, and JS LIKE FOCUS ON HAVING A GOOOD TINEEEEEEEEEE.",
-        "Don't worry bout anything else today. AJ APNE BAS ENJOY KARNA HAI. Your books will survive one day without you, I promise.",
+        "New rule, effective immediately: no studying today. Not even 'just one chapter'. Your books can wait — they've waited this long, one more day won't kill them.",
+        "Today's agenda: go out with your family, eat something delicious, and just have the BEST time. That's an order, soldier.",
       ],
       image: "./assets/friendship.png",
       imageAlt: "Love constellation",
@@ -156,10 +156,10 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
     {
       id: "chapter-5",
       badge: "Chapter Five",
-      title: "MWAHHH 💗",
+      title: "MY FAVORITE HUMAN",
       paragraphs: [
-        "YOU BRING SO SO MUCH HAPPINESS TO ME, MERI JANNN. Like you don't even understand?? You're such an amazing person and you deserve EVERYTHING.",
-        "So celebrate accordingly!! Be happy, eat cake, and remember someone loves you SOOOOO MUCHJHH. MWAHHH.",
+        "You make everything better just by being in it, meri jan. Bad days, good days — all better with you around.",
+        "If I could, I'd hand you the moon tonight. For now, this website and all my love will have to do.",
       ],
       image: "./assets/heart.png",
       imageAlt: "Golden heart",
@@ -169,8 +169,8 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       badge: "Chapter Six",
       title: "OUR LITTLE UNIVERSE",
       paragraphs: [
-        "Every love story is cute but ours?? Ours is the CUTEST, no debate. The late-night talks, the silly jokes, the way you just get me.",
-        "And we're just getting started, JANU MANU. The best chapters are still coming — I can feel it.",
+        "The late-night talks, the dumb jokes, the way you laugh at my worst puns — I wouldn't trade any of it for anything.",
+        "You're my favorite notification, my favorite distraction, my favorite everything. And we're just getting started, janu manu.",
       ],
       image: "./assets/book.png",
       imageAlt: "Our storybook",
@@ -180,8 +180,8 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       badge: "Chapter Seven",
       title: "FOREVER YOURS, OKAY?",
       paragraphs: [
-        "Like literally forever. You're my person and I'm not sharing you with anyone, sorry not sorry.",
-        "HAPPUUYY BIRTHDAY AGAINNNNNN, meri jan 💗💗💗💗",
+        "Just so we're clear: you're not getting rid of me. Ever. I'm like glitter — once I'm on you, I'm there forever.",
+        "Happy birthday once more, my love 💗💗💗",
       ],
       image: "./assets/tree.png",
       imageAlt: "Tree of love",
@@ -190,79 +190,79 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
   friendshipCardsSection: {
     badge: "Chapter Two",
     title: "THINGS I LOVE ABOUT YOU",
-    subtitle: "Tap each card okay?? Every single one is true.",
+    subtitle: "Tap them all, okay? No skipping.",
     cards: [
       {
         emoji: "🌸",
         title: NICKNAME,
-        text: "My silly little name for you. You're the only janu manu in the whole world, and you're MINE.",
+        text: "Only I get to call you that. It's the law. My law.",
       },
       {
         emoji: "✨",
-        title: "SO PRETTY",
-        text: "Don't ever talk bad about yourself again, okay?? You are LITR so cute, so pretty. My eyes are perfect. Case closed.",
+        title: "THAT SMILE",
+        text: "Scientifically proven* to fix my worst moods in under 3 seconds. (*not scientifically proven, but trust me)",
       },
       {
         emoji: "💛",
-        title: "MY HAPPINESS",
-        text: "You bring SO SO much happiness to me. My whole mood does a backflip the second you text me.",
+        title: "YOUR HEART",
+        text: "The way you care about everyone?? You're too good for this world, honestly.",
       },
       {
         emoji: "🌙",
-        title: "MIDNIGHT TALKS",
-        text: "Best part of my day = talking to you while the whole world is asleep. Don't ever stop.",
+        title: "3AM YOU",
+        text: "Sleepy, silly, extra cute you. My favorite version. Don't tell the other versions.",
       },
       {
         emoji: "🎯",
-        title: "MERI JANNN",
-        text: "Meri jannnn, my everything. I love you so much it's actually stupid.",
+        title: "MY PERSON",
+        text: "In every universe, I'd pick you. Even the one where we're both cats.",
       },
       {
         emoji: "🤝",
-        title: "PARTNER IN CRIME",
-        text: "Every plan, every silly idea, every 3am thought — I want you there for all of it. Forever.",
+        title: "US",
+        text: "You + me + snacks + no plans = perfect day. That's the formula. Don't question it.",
       },
     ],
   },
   quotesSection: {
     quote1:
-      "HAPPPPYYYY BIRTHDAY TO THE PRETTIEST GIRL IN THE WORLD. Yes I'm talking about you. Don't argue.",
+      "Some people are birthdays themselves — they make every day feel like a celebration. You're one of them.",
     quote2:
-      "You deserve all the happiness, all the cake, and all my love. Today and every single day.",
+      "I don't need a genie. I already got my wish — it's you.",
     quote3:
-      "AJ APNE BAS ENJOY KARNA HAI — everything else can wait. It's YOUR day, janu manu. 💗",
+      "Today, the only homework is happiness. And you're already top of the class.",
   },
   cakeSection: {
     badge: "Interactive Birthday Celebration",
     title: "Blow Out The Candles!",
     subtitle:
-      "Make a wish janu manu — make it a GOOD one!! Then blow out the candles ✨",
+      "Close your eyes, think of the BEST wish, and blow!! I'll handle the rest ✨",
     tapToRevealTitle: "TAP TO REVEAL YOUR BIRTHDAY CAKE!",
     tapToRevealSubtitle: "Something yummy is waiting for you inside ✨",
     instructionBannerTitle: "🕯️ TAP EACH CANDLE OR THE BUTTON BELOW! 🕯️",
     instructionBannerSubtitle:
       "Make your birthday wish and blow out the candles!",
-    celebrationTitle: "HAPPPPYYYY BIRTHDAY MY LOVE!!",
+    celebrationTitle: "HAPPY BIRTHDAY MY LOVE!!",
     celebrationSubtitle:
-      "YOU DID IT!! Now close your eyes and wish for EVERYTHING — you deserve it ALL, meri jan. Happy birthday to the cutest girl alive ✨💗",
+      "WISH GRANTED!! (Probably. The candles and I did our best.) Happy birthday to the cutest girl alive ✨💗",
     blowAllButtonText: "BLOW ALL CANDLES AT ONCE",
     reLightButtonText: "Light Candles Again 🕯️",
   },
   lanternsSection: {
     badge: "Chapter Eight",
     title:
-      "May every wish you make tonight fly up like these lanterns — and may they ALL come true ✨",
+      "Every lantern up there is carrying one of my wishes for you. Spoiler: they're all about you being happy.",
   },
   finaleSection: {
-    badge: "💗 HAPPPPYYYY BIRTHDAY MERI JAN 💗",
+    badge: "💗 HAPPY BIRTHDAY MERI JAN 💗",
     titleLine1: "HAPPIEST",
     titleLine2: "BIRTHDAY",
     bridgeText: "To My",
     nameText: `${FRIEND_NAME.toUpperCase()}`,
     wishesParagraphs: [
-      `HAPPUUYY BIRTHDAY AGAINNNNNN, my ${NICKNAME}!! I LOVE YOU SO MUCHHHHHHH and I just want you to have the BEST day ever.`,
-      "Go out with your family, eat lots of cake, DON'T touch your books, and just enjoy. AJ APNE BAS ENJOY KARNA HAI, okay??",
-      "You bring so so much happiness to me and you deserve everything. MWAHHH. Forever yours. 💗",
+      `One more time, nice and loud: HAPPY BIRTHDAY, ${FRIEND_NAME.toUpperCase()}!! I hope today treats you as well as you treat everyone else.`,
+      "Now go enjoy with your family, eat way too much cake, and forget your textbooks exist. Doctor's orders. (I'm the doctor.)",
+      "I love you endlessly, my janu manu. MWAHHH — forever yours. 💗",
     ],
     signOffPreText: "Forever and always, with all my heart",
     signOffRelationship: "YOURS ONLY",
